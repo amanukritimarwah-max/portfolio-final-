@@ -1,0 +1,1018 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EmPals — Case Study · Anukriti Marwah</title>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Urbanist:wght@300;400;500;600;700&family=Inter:wght@500;600;900&display=swap" rel="stylesheet">
+<style>
+:root{--o:#FF7A1A;--b:#6A89B5;--y:#ffcc08;--k:#000;--w:#fff;--ln:rgba(255,255,255,.22);--A:5.5vw}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#000;color:#fff;font:300 18px/1.5 Urbanist,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}img,video{display:block;width:100%}
+h2,h3,.ch{font-family:'Lilita One',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;margin:0}
+.nv{position:fixed;top:0;left:0;right:0;z-index:60;height:54px;background:#000;border-bottom:1px solid var(--ln);display:flex;align-items:center;justify-content:space-between;padding:0 26px;font:600 12.5px Urbanist;letter-spacing:.12em;text-transform:uppercase}
+.nv a{text-decoration:none;opacity:.75;transition:.2s}.nv a:hover,.nv a.on{opacity:1;color:var(--o)}.nv .lg{font:400 22px 'Lilita One';letter-spacing:0;text-transform:none;opacity:1;color:var(--o)}.nv .c{display:flex;gap:30px}.nv .tag{border:1px solid var(--ln);padding:7px 14px;border-radius:4px;opacity:1}
+@media(max-width:900px){.nv .c{display:none}}
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--o);z-index:61}
+/* cover */
+.cv{padding-top:0;padding-bottom:70px;background:#000;overflow:hidden;position:relative;z-index:1}
+.cb{display:grid;grid-template-columns:1.5fr 1.2fr 1.1fr 1fr;border-bottom:1px solid var(--ln)}.cb>div{padding:16px 18px;border-right:1px solid var(--ln)}.cb>div:last-child{border:0}
+.cb small{display:block;font:500 12px Urbanist;color:rgba(255,255,255,.65)}.cb b{display:block;font:600 15px/1.3 Urbanist;margin-top:5px}.cb i{font-style:normal;color:var(--o)}
+.tt{position:relative;margin-top:clamp(30px,14.5vw,230px)}.cv h1{margin:0;padding:0 2.2vw;font:900 clamp(70px,16.2vw,300px)/.86 Inter,sans-serif;letter-spacing:-.045em;white-space:nowrap}.cv h1 span{color:var(--o)}
+.pl{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 2.2vw;margin-top:clamp(24px,3.4vw,50px);flex-wrap:wrap}
+.pi{padding:13px 26px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font:500 14px Urbanist;letter-spacing:.04em}.pi.mid{background:var(--o);border-color:var(--o)}
+.pl .pi:nth-child(2){margin-right:auto;margin-left:14px}.pl .pi.mid{margin-right:auto}
+.tg{display:flex;justify-content:space-between;gap:30px;padding:0 2.2vw;margin-top:26px}.tg p{margin:0;max-width:300px;font:300 18px/1.3 Urbanist;color:rgba(255,255,255,.85)}.tg p.r{text-align:right}
+.cimg{margin:-50px auto 0;max-width:820px;padding:0 20px;position:relative}.cimg img{border-radius:18px 18px 0 0;max-height:480px;object-fit:cover;object-position:50% 80%;cursor:zoom-in}
+@media(max-width:900px){.cb{grid-template-columns:1fr 1fr}.cb>div{border-bottom:1px solid var(--ln)}.tg{flex-direction:column}.tg p.r{text-align:left}.cimg{margin-top:20px}}
+/* sections with angled seams */
+.s{position:relative;padding:calc(var(--A) + 90px) 0 calc(var(--A) + 70px);margin-top:calc(var(--A)*-1);z-index:2}
+.s.k{background:#000;color:#fff}.s.w{background:#fff;color:#000}
+.t1{clip-path:polygon(0 var(--A),100% 0,100% 100%,0 100%)}
+.t2{clip-path:polygon(0 0,100% var(--A),100% 100%,0 100%)}
+.t3{clip-path:polygon(0 var(--A),55% 0,100% calc(var(--A)*.6),100% 100%,0 100%)}
+.t4{clip-path:polygon(0 calc(var(--A)*.5),45% var(--A),100% 0,100% 100%,0 100%)}
+.wd{max-width:1240px;margin:0 auto;padding:0 40px}
+.w .mut{color:#8c8c8c}.k .mut{color:rgba(255,255,255,.5)}
+h2{font-size:clamp(40px,5.4vw,78px);line-height:1}h2 em{font-style:normal;color:var(--o)}
+.lead{font:400 clamp(18px,1.8vw,24px)/1.4 Urbanist;margin:22px 0 0;max-width:640px}
+.small{font:300 15px/1.5 Urbanist;max-width:300px}
+.f{margin:0}.f img{cursor:zoom-in;border-radius:10px}.f figcaption{font:400 13px Urbanist;margin-top:10px;opacity:.6}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+/* current take */
+.take{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center;min-height:620px;position:relative}
+.take h2{font-size:clamp(34px,4vw,56px)}.take .sub{font:400 clamp(18px,1.7vw,22px)/1.4 Urbanist;margin:28px 0 0}.take .sub b{font-weight:600}
+.take .body{font:300 17px/1.45 Urbanist;color:rgba(255,255,255,.55);max-width:430px;margin-top:22px}
+.ph{position:relative;display:block}
+.phone{width:min(720px,100%);transform:rotate(-19deg) skewX(-2deg);border-radius:46px;background:#e8e8e8;padding:12px;border:3px solid #cfcfcf;box-shadow:0 40px 90px rgba(0,0,0,.6),inset 0 0 0 2px #fff;margin:40px 0 20px 30px;transition:transform .2s}
+.phone img{border-radius:34px;aspect-ratio:996/438;object-fit:cover}
+.tri{position:absolute;pointer-events:none}.tri.a{top:-60px;right:30%;width:240px;height:150px;background:#c8541d;clip-path:polygon(0 0,100% 0,60% 100%)}.tri.b{top:-90px;right:-40px;width:520px;height:230px;background:#63387f;clip-path:polygon(0 0,100% 0,100% 100%,30% 100%)}
+.take .r{position:absolute;right:0;bottom:-10px;max-width:310px}.take .r p{font:300 13px/1.35 Urbanist;color:rgba(255,255,255,.6);margin:0}.take .r b{display:block;font:500 20px Urbanist;margin-top:10px}
+@media(max-width:860px){.take{grid-template-columns:1fr}.take .r{position:static;margin-top:20px}.phone{transform:rotate(-8deg);margin:30px 0}.tri.b{width:260px}}
+/* statement */
+.stmt{min-height:640px;position:relative;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.stmt h2{font:300 clamp(40px,7vw,104px)/1.05 Urbanist;text-transform:none;letter-spacing:-.03em}.stmt h2 b{font-weight:700}.stmt h2 i{font-weight:200}
+.stmt .cc{position:absolute;width:min(300px,26vw);border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25);border:6px solid #fff}.stmt .c1{left:0;top:-20px;rotate:-5deg}.stmt .c2{right:0;bottom:30px;rotate:4deg}.stmt .cc img{aspect-ratio:4/3;object-fit:cover;cursor:zoom-in}
+.stmt .ft{position:absolute;left:0;right:0;bottom:-30px;display:flex;justify-content:space-between;font:500 12px Urbanist;font-style:italic;color:#333;gap:20px;flex-wrap:wrap}
+@media(max-width:860px){.stmt .cc{display:none}}
+/* richie bubbles */
+.bub .top{text-align:center;font:300 clamp(16px,1.6vw,21px)/1.35 Urbanist;color:rgba(255,255,255,.55);max-width:720px;margin:0 auto 90px}.bub .top em{display:block;font-style:italic;color:#fff;margin:6px 0}
+.tri3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start}.tri3>div{position:relative}.tri3 .cd{border-radius:34px;overflow:hidden;aspect-ratio:3/4;background:#111}.tri3 .cd img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.tri3>div:nth-child(2){margin-top:70px}.tri3>div:nth-child(3){margin-top:20px}
+.bb{position:absolute;padding:12px 20px;border-radius:30px;font:400 14px/1.25 Urbanist;max-width:230px;z-index:2;box-shadow:0 8px 24px rgba(0,0,0,.4)}.bb.g{background:#e3e3e3;color:#111}.bb.u{background:#0b4ab8;color:#fff}.bb:before{content:"";position:absolute;width:15px;height:15px;border-radius:50%;background:#e3e3e3;left:-30px;top:12px;box-shadow:-18px 4px 0 -3px #e3e3e3}.bb.u:before{display:none}
+@media(max-width:860px){.tri3{grid-template-columns:1fr}.tri3>div{margin-top:0!important}.bb{position:static;margin-top:10px;display:inline-block}}
+/* pills */
+.pw{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;min-height:560px}
+.pills{position:relative;height:440px}.pp{position:absolute;padding:20px 30px;border:1px solid rgba(255,255,255,.6);border-radius:34px;font:300 15px/1.2 Urbanist;background:#000;white-space:nowrap}.pp b{font:400 28px 'Lilita One';color:var(--o);margin-right:10px}
+.pp:nth-child(1){left:12%;top:20px;rotate:3deg}.pp:nth-child(2){left:0;top:110px;rotate:-10deg}.pp:nth-child(3){left:10%;top:210px;rotate:9deg}.pp:nth-child(4){left:7%;top:310px;rotate:-6deg}
+.dot{position:absolute;border-radius:50%;background:#2c2c2c}
+.pw .rt{text-align:right}.pw .rt h2{font-size:clamp(32px,3.8vw,54px)}.pw .rt p{font:400 clamp(22px,2.4vw,32px)/1.35 Urbanist;margin:46px 0 0}.pw .rt p span{color:rgba(255,255,255,.5)}.pw .rt .sm{font:300 14px/1.4 Urbanist;color:rgba(255,255,255,.6);max-width:260px;margin:60px 0 0 auto}
+@media(max-width:860px){.pw{grid-template-columns:1fr}.pills{height:420px}.pw .rt{text-align:left}.pw .rt .sm{margin-left:0}.pp{white-space:normal}}
+/* research */
+.rs{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}.rs h2{font-size:clamp(40px,5vw,72px)}.rs .g{font:600 30px Urbanist;margin:60px 0 14px}.rs .tx{font:300 clamp(18px,1.7vw,22px)/1.45 Urbanist;color:#8c8c8c;max-width:560px}.rs .tx b{color:#000;font-weight:500}
+.circ{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}.circ div{width:170px;height:170px;border-radius:50%;border:1px solid #444;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;font:500 14px/1.2 Urbanist}.circ small{font:300 12px/1.25 Urbanist;color:#8c8c8c;margin-top:6px}
+.circ div:nth-child(even){transform:translateY(34px)}
+.stt{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;border-top:1px solid #000}.stt>div{padding:22px 20px 24px 0;border-bottom:1px solid #ddd}.stt b{display:block;font:400 clamp(38px,4.4vw,64px)/1 'Lilita One';color:var(--o)}.stt span{font:400 15px/1.3 Urbanist;display:block;margin-top:6px}
+@media(max-width:860px){.rs{grid-template-columns:1fr}.stt{grid-template-columns:1fr 1fr}}
+/* insight cards */
+.ins h2{text-align:center}.ins .l1{text-align:center;font:300 clamp(16px,1.6vw,20px)/1.4 Urbanist;color:#8c8c8c;max-width:760px;margin:28px auto 50px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.cards>div{border:1px solid #c9c9c9;padding:34px 28px;text-align:center}.cards h3{font-size:24px;margin-bottom:16px}.cards p{margin:0;font:400 16px/1.45 Urbanist}
+.ins .l2{text-align:center;font:300 clamp(16px,1.6vw,20px)/1.4 Urbanist;color:#8c8c8c;margin:46px 0 0}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+/* words */
+.wl{text-align:center;padding:20px 0;position:relative}.wl p{margin:0;font:200 clamp(38px,5.6vw,80px)/1.15 Urbanist;font-style:italic;letter-spacing:-.03em;color:#d9d9d9;transition:color .25s,transform .25s;will-change:transform}.wl p.on{color:#000;font-weight:300;transform:scale(1.04)}
+.wl p:nth-child(odd){transform:translateX(-5%)}.wl p:nth-child(even){transform:translateX(7%)}.wl p.on{transform:translateX(0) scale(1.04)}
+.wl .fl{position:absolute;width:150px;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.25)}.wl .fl img{aspect-ratio:3/4;object-fit:cover}.wl .fa{left:4%;top:0}.wl .fb{right:5%;bottom:0}
+@media(max-width:860px){.wl .fl{display:none}}
+/* motivation */
+.mt h2{font-size:clamp(40px,5vw,72px)}.stp{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 20px}.stp button{all:unset;cursor:pointer;padding:12px 22px;border:1px solid rgba(255,255,255,.4);border-radius:999px;font:600 14px Urbanist;letter-spacing:.06em;text-transform:uppercase;transition:.2s}.stp button.on,.stp button:hover{background:var(--o);border-color:var(--o)}
+.sx{font:300 clamp(24px,3vw,42px)/1.2 Urbanist;min-height:110px;max-width:860px;margin:0 0 50px}
+.tb{width:100%;border-collapse:collapse;margin:0 0 50px;font:300 17px Urbanist}.tb th{text-align:left;font:400 14px 'Lilita One';letter-spacing:.1em;text-transform:uppercase;color:var(--o);padding:12px 14px 12px 0;border-bottom:1px solid rgba(255,255,255,.4)}.tb td{padding:16px 14px 16px 0;border-bottom:1px solid rgba(255,255,255,.14)}.tb td:first-child{font-weight:600}
+/* design system */
+.sw{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:44px 0 24px}.sw button{all:unset;cursor:pointer;height:150px;border-radius:12px;padding:18px;color:#fff;font:400 22px 'Lilita One';display:flex;flex-direction:column;justify-content:flex-end;transition:transform .25s}.sw button:hover{transform:translateY(-6px) rotate(-1deg)}.sw small{font:400 14px Urbanist;opacity:.9;margin-top:4px}
+@media(max-width:700px){.sw{grid-template-columns:1fr}}
+.stk{display:grid;gap:22px;margin-top:30px}
+/* process */
+.pr h2{font-size:clamp(40px,5vw,72px)}.rd{position:relative;aspect-ratio:12/7;margin-top:30px}.rd svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rd .lb2{position:absolute;max-width:15.5%;text-align:center;transform:translate(-50%,0);font:500 clamp(11px,1.2vw,17px)/1.2 Urbanist;color:#000;opacity:0;transition:opacity .6s}.rd .lb2.on{opacity:1}.rd .lb2 span{display:block;font:300 clamp(9px,.85vw,12px)/1.3 Urbanist;color:#8c8c8c;margin-top:5px}
+.rd .lb2.lf{text-align:left;transform:none;max-width:16%}.rd .lb2.rt2{text-align:right;transform:none;max-width:16%}
+.nd{fill:#000;opacity:0;transition:opacity .5s}.nd.on{opacity:1}.pa{fill:none;stroke:#000;stroke-width:1.2}svg .st{stroke:#000;stroke-width:1.2;opacity:0;transition:opacity .5s}svg .st.on{opacity:1}
+/* press play */
+.pl2{text-align:center}.pl2 h2{font-size:clamp(40px,5.6vw,80px)}.pl2 .lead{margin:20px auto 0;text-align:center;font-weight:300;color:rgba(255,255,255,.7);font-size:clamp(16px,1.5vw,20px)}
+.vp{position:relative;max-width:1180px;margin:46px auto 0;aspect-ratio:996/438;background:#0e0e12;border-radius:6px;overflow:hidden}.vp video{position:absolute;inset:0;height:100%;object-fit:contain;background:#000}
+.vp .ov{position:absolute;inset:0;z-index:3;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#0e0e12;transition:opacity .4s}.vp .ov.off{opacity:0;pointer-events:none}
+.vp .s1{position:absolute;top:0;right:0;width:45%;height:50%;background:#d85a27;clip-path:polygon(7% 0,100% 0,100% 100%,0 70%)}.vp .s2{position:absolute;bottom:0;left:0;width:100%;height:32%;background:#63387f;clip-path:polygon(0 100%,0 90%,100% 0,100% 100%)}
+.vp .pb{position:relative;width:min(120px,16vw);aspect-ratio:1;border-radius:50%;background:var(--y);display:grid;place-items:center;transition:transform .25s}.vp .ov:hover .pb{transform:scale(1.1)}.vp .pb:after{content:"";border-left:30px solid #000;border-top:19px solid transparent;border-bottom:19px solid transparent;margin-left:8px}
+.vp .tp{position:relative;font:400 clamp(26px,3.2vw,44px) 'Lilita One';text-transform:uppercase}.vp .sn{position:relative;font:400 14px Urbanist}
+.tips{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:26px 0 8px;font:400 15px Urbanist;color:rgba(255,255,255,.8)}.tips b{color:var(--o);margin-right:8px}
+.ctl{display:flex;justify-content:center;gap:10px;margin-top:18px}.ctl button{all:unset;cursor:pointer;padding:11px 20px;border:1px solid rgba(255,255,255,.55);border-radius:4px;font:600 12.5px Urbanist;letter-spacing:.12em;text-transform:uppercase;transition:.2s}.ctl button:hover{background:#fff;color:#000}
+.rl{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin:70px -40px 0;padding:0 40px 18px;scrollbar-width:thin}.rl .f{flex:0 0 min(660px,86vw);scroll-snap-align:start}.rl figcaption{opacity:.8}.rl figcaption b{font-weight:600;display:block;font-size:17px}
+.flw{margin-top:80px}
+/* axis */
+.ax2 h2{text-align:center;font-size:clamp(36px,4.6vw,64px)}.axh{display:grid;grid-template-columns:1fr 200px 1fr;margin:50px 0 10px;font:400 26px 'Lilita One';text-transform:uppercase;text-align:center;color:rgba(255,255,255,.4)}.axh span:last-child{color:var(--o)}
+.axr{display:grid;grid-template-columns:1fr 200px 1fr;align-items:center;gap:0;padding:26px 0;position:relative}.axr:before{content:"";position:absolute;left:3%;right:3%;top:50%;height:1px;background:rgba(255,255,255,.2)}
+.axr .l{text-align:right;padding-right:22px;position:relative;background:#000;font:300 17px/1.3 Urbanist;color:rgba(255,255,255,.6);justify-self:end;max-width:90%}.axr .r{padding-left:22px;position:relative;background:#000;font:400 19px/1.3 Urbanist;justify-self:start;max-width:90%}
+.axr .m{text-align:center;position:relative;background:#000;font:400 26px 'Lilita One';text-transform:uppercase;line-height:1;padding:6px 0}.axr .m small{display:block;font:300 11px Urbanist;text-transform:none;color:rgba(255,255,255,.6);margin-top:4px}
+@media(max-width:760px){.axh,.axr{grid-template-columns:1fr 90px 1fr}.axr .m{font-size:17px}}
+/* blue / bcm */
+.bcm h2{font-size:clamp(40px,6vw,92px)}.bcm h2 em{color:#ff9d52}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:50px}.gal figure{margin:0;border-radius:18px;overflow:hidden;background:#111}.gal img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .7s}.gal figure:hover img{transform:scale(1.05)}
+.g1{grid-column:span 7;aspect-ratio:3/2}.g2{grid-column:span 5;grid-row:span 2}.g3,.g4,.g5{grid-column:span 4;aspect-ratio:3/2}.g6{grid-column:span 12;aspect-ratio:21/9}
+@media(max-width:760px){.gal figure{grid-column:span 12!important;grid-row:auto!important;aspect-ratio:3/2!important}}
+.vid{margin:50px 0 0;border-radius:10px;overflow:hidden}.vid video{max-height:80vh;background:#000}
+.sts{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:50px;border-top:1px solid var(--ln)}.sts>div{padding:22px 16px 22px 0;border-bottom:1px solid var(--ln)}.sts b{display:block;font:400 clamp(36px,4.4vw,64px)/1 'Lilita One';color:#ff9d52}.sts span{font:300 15px/1.3 Urbanist;color:rgba(255,255,255,.75)}
+@media(max-width:760px){.sts{grid-template-columns:1fr 1fr}}
+.src{font:300 12.5px Urbanist;opacity:.55;margin-top:14px}
+.ftr{position:relative;z-index:3;background:#000;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:110px 40px 70px;font:400 clamp(26px,3.6vw,52px)/1.1 'Lilita One';text-transform:uppercase;max-width:1320px;margin:0 auto}.ftr a{text-decoration:none;border-bottom:2px solid var(--ln);transition:.2s}.ftr a:hover{color:var(--o);border-color:var(--o)}
+.lbx{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.95);display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:26px}.lbx.on{display:flex}.lbx img{width:auto;max-width:94vw;max-height:86vh;border-radius:8px;background:#fff}.lbx p{margin:0;color:#ccc;font-size:14px}.lbx button{all:unset;position:absolute;cursor:pointer;color:#fff;font:600 30px Urbanist;padding:16px;opacity:.8}.lbx .x{right:12px;top:8px}.lbx .pv{left:8px;top:50%}.lbx .nx{right:8px;top:50%}
+
+/* ---- part 2 ---- */
+.bi{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.bi h2{font-size:clamp(36px,4.4vw,60px)}.bi .sb{font:300 24px Urbanist;margin:10px 0 30px}
+.br{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:30px 0;border-top:1px solid rgba(255,255,255,.2)}.br b{font:300 26px Urbanist}.br span{font:300 16px/1.45 Urbanist;color:rgba(255,255,255,.62)}.br span strong{color:#fff;font-weight:600}
+.cc2{position:relative;aspect-ratio:1;max-width:560px;margin:0 auto;width:100%}.cc2 div{position:absolute;left:50%;bottom:0;transform:translateX(-50%);border:1px solid rgba(255,255,255,.4);border-radius:50%;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:7%}
+.cc2 div b{font:400 15px 'Lilita One';text-transform:uppercase}.cc2 div span{font:300 12.5px/1.3 Urbanist;color:rgba(255,255,255,.6);max-width:60%;margin-top:8px}
+.cc2 .c4{width:100%;height:100%}.cc2 .c3{width:76%;height:76%}.cc2 .c2{width:52%;height:52%}.cc2 .c1{width:28%;height:28%;padding-top:5%}
+@media(max-width:860px){.bi{grid-template-columns:1fr}.br{grid-template-columns:1fr}}
+.tv{display:grid;grid-template-columns:1fr 1fr;gap:50px}.tv h2{text-align:center;font-size:clamp(32px,3.6vw,52px)}.tv .d{text-align:center;font:300 14px/1.4 Urbanist;color:#999;max-width:520px;margin:30px auto 40px}
+.sl{position:relative;padding:20px 60px 20px 70px}.sl .row{position:relative;height:56px;display:flex;align-items:center}.sl .ln{position:absolute;left:0;right:0;top:50%;height:1px;background:#333}.sl .a,.sl .z{position:absolute;font:300 13px Urbanist;color:#555;top:50%;transform:translateY(-50%)}.sl .a{left:-62px}.sl .z{right:-72px}
+.sl .dt{position:absolute;top:50%;border-radius:50%;background:#777;transform:translate(-50%,-50%)}.sl i{position:absolute;inset:-60px -20px;z-index:-1;background:rgba(0,0,0,.04);border-radius:50%;transform:rotate(-30deg)}
+.qd{position:relative;height:460px;margin:10px 30px 0}.qd .h{position:absolute;left:0;right:0;top:50%;height:1px;background:#555}.qd .v{position:absolute;top:0;bottom:0;left:50%;width:1px;background:#555}.qd small{position:absolute;font:300 13px/1.2 Urbanist;color:#555}
+.qd .me{position:absolute;right:6%;top:12%;width:240px;height:150px;border-radius:50%;background:#f1f1f1;display:grid;place-items:center;font:600 16px Urbanist;rotate:-18deg}.qd .ot{position:absolute;left:10%;bottom:14%;padding:12px 20px;border-radius:30px;border:1px dashed #999;font:400 14px Urbanist;color:#555}
+@media(max-width:900px){.tv{grid-template-columns:1fr}}
+.nm{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:36px;min-height:520px}.nm .a1 h2{font-size:clamp(28px,3vw,42px);color:#bbb;line-height:1.1}.nm .a1 h2.on{color:#000}.nm .a1 .w{font:600 13px Urbanist;margin:90px 0 8px}.nm ul{list-style:none;margin:0;padding:0;font:300 13px/1.5 Urbanist;color:#777}.nm ul li:before{content:"· ";}
+.nm .a2{position:relative;padding-left:30px}.nm .a2:before{content:"";position:absolute;left:0;top:70px;bottom:0;width:2px;background:#444}.nm .a2 em{font:italic 600 18px Urbanist}.nm .a2 .it{margin:44px 0 0;font:700 17px 'Lilita One';text-transform:uppercase;color:#888}.nm .a2 .it.on{color:#000}.nm .a2 .it small{display:block;font:300 12.5px Urbanist;text-transform:none;color:#777;margin-top:4px}
+.nm .a3 .q{font:400 120px/.6 'Lilita One';color:#bbb}.nm .a3 p{margin:0;font:300 clamp(16px,1.5vw,20px)/1.45 Urbanist;color:#999}.nm .a3 p i{display:block;font:italic 300 clamp(22px,2.2vw,30px)/1.2 Urbanist;color:#000;margin:14px 0 50px}.nm .a3 .qq{font:400 clamp(18px,1.8vw,24px) Urbanist;color:#000}
+@media(max-width:900px){.nm{grid-template-columns:1fr}}
+.cl h2{font:400 clamp(32px,3.8vw,52px) Urbanist;text-transform:uppercase}.cl .sm{font:600 17px Urbanist;margin:50px 0 6px}.cl .big{font:700 clamp(22px,2.2vw,30px) Urbanist;margin:0 0 14px}.cl .tx{font:300 15px/1.5 Urbanist;color:#999;max-width:540px}
+.bl3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px}.bl3 .b{aspect-ratio:1.5;border-radius:26px;position:relative;overflow:hidden}.bl3 .b:before{content:"";position:absolute;left:12%;top:14%;width:64%;height:70%;background:var(--c);border-radius:46% 54% 50% 50%/55% 45% 55% 45%;border:1px solid #333}.bl3 .b:nth-child(2):before{rotate:20deg;border-radius:60% 40% 55% 45%/45% 60% 40% 55%}.bl3 .b:nth-child(3):before{rotate:-15deg}
+.bl3 .n{margin-top:12px;font:600 17px Urbanist}.bl3 .n small{display:block;font:300 13px Urbanist;color:#777}
+@media(max-width:760px){.bl3{grid-template-columns:1fr}}
+.tf{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:40px;margin-bottom:40px}.tf h2{font:400 clamp(30px,3.2vw,46px) Urbanist;text-transform:uppercase}.tf p{margin:0;font:300 14px/1.5 Urbanist;color:#666}.tf p b{color:#000;font-weight:700}
+.tb2{display:grid;grid-template-columns:1.5fr 1fr;gap:30px}.tb2 h3{font:300 clamp(24px,2.6vw,38px) Urbanist;text-transform:none;margin-bottom:14px}.tb2 .bk{background:#000;color:#fff;min-height:380px;padding:34px;display:flex;flex-direction:column;justify-content:flex-end}.tb2 .bk .f1{font:900 clamp(60px,9vw,140px)/.85 Inter;letter-spacing:-.04em}.tb2 .bk ul{list-style:none;margin:0;padding:0;font:300 17px Urbanist}.tb2 .bk li{display:flex;justify-content:space-between;border-bottom:1px solid #333;padding:9px 0}.tb2 .bk li span{color:#888}
+@media(max-width:860px){.tf,.tb2{grid-template-columns:1fr}}
+.il h2{text-align:center;font-size:clamp(34px,4.2vw,60px)}.il .tx{text-align:center;font:300 15px/1.5 Urbanist;color:rgba(255,255,255,.7);margin:30px auto 50px}
+.pan{display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:end}.pan>div{padding:10px;overflow:hidden}.pan img{border-radius:6px;cursor:zoom-in;height:100%;object-fit:cover}.pan>div:nth-child(1){background:#6A89B5;clip-path:polygon(0 18%,100% 0,100% 100%,0 100%);padding-top:70px}.pan>div:nth-child(2){background:#FF7A1A;clip-path:polygon(0 8%,70% 12%,100% 4%,100% 100%,0 100%);padding-top:50px}.pan>div:nth-child(3){background:#9AA8B9;clip-path:polygon(0 4%,60% 12%,100% 0,100% 100%,0 100%);padding-top:50px}
+@media(max-width:760px){.pan{grid-template-columns:1fr}}
+.gs h2{text-align:center;font-size:clamp(30px,3.6vw,52px);line-height:1.15}.gs .qt{text-align:center;font:600 clamp(16px,1.6vw,21px)/1.4 Urbanist;margin:60px auto 80px;max-width:760px}
+.gs .st{display:grid;grid-template-columns:.8fr 1.2fr 1fr;gap:30px;align-items:center}.gs .st h3{font:400 28px 'Lilita One';text-transform:none;margin-bottom:16px}.gs .st p{margin:0 0 12px;font:400 17px/1.4 Urbanist}.gs .st p b{font:400 clamp(26px,2.6vw,36px) 'Lilita One';color:#d777c8;display:block;margin-top:4px}
+.gs .st .cv2 img{border-radius:20px;cursor:zoom-in}
+.pb2{position:relative;height:420px}.pb2 span{position:absolute;background:#63387f;color:#fff;font:400 clamp(16px,1.6vw,22px)/1.2 Urbanist;font-weight:600;padding:22px 34px;clip-path:polygon(8% 0,100% 0,92% 100%,50% 100%,0 100%);text-align:center}
+.pb2 span:nth-child(1){left:6%;top:0;transform:rotate(-3deg)}.pb2 span:nth-child(2){right:0;top:60px;transform:rotate(2deg)}.pb2 span:nth-child(3){left:20%;top:160px;transform:rotate(-1deg)}.pb2 span:nth-child(4){right:6%;top:260px}
+@media(max-width:900px){.gs .st{grid-template-columns:1fr}.pb2{height:auto;display:flex;flex-wrap:wrap;gap:10px}.pb2 span{position:static;transform:none!important}}
+.mt2{text-align:center;margin-top:70px}.mt2 p{font:300 clamp(16px,1.6vw,21px)/1.4 Urbanist;color:rgba(255,255,255,.7);margin:0 auto;max-width:640px}.mt2 h3{font:400 clamp(30px,3.6vw,52px) 'Inter';font-weight:900;margin:20px 0 40px}
+.lph{width:min(560px,100%);border:7px solid #1a1a1a;border-radius:30px;background:#fff;overflow:hidden;box-shadow:0 0 0 2px #444,0 30px 70px rgba(0,0,0,.5);position:relative}.lph img{aspect-ratio:996/438;object-fit:cover;cursor:zoom-in}
+.hand{position:absolute;background:#e25d2a;pointer-events:none}.hand.l{left:0;bottom:-2px;width:34%;height:260px;clip-path:polygon(0 100%,0 40%,58% 0,100% 18%,100% 100%)}.hand.r{right:0;bottom:-2px;width:34%;height:260px;clip-path:polygon(100% 100%,100% 40%,42% 0,0 18%,0 100%)}
+.uj{text-align:center}.uj h2{font:400 clamp(28px,3vw,42px) 'Inter';font-weight:800;text-transform:none}.uj .tx{font:300 17px/1.45 Urbanist;color:rgba(255,255,255,.75);max-width:520px;margin:30px auto 70px}.ph2{display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap;position:relative;z-index:2}.ph2 .ar{font:400 50px Urbanist;color:var(--o)}
+.dd h2{text-align:center;font:900 clamp(36px,4.6vw,66px) Inter}.dd .stg2{position:relative;max-width:1100px;margin:60px auto 0;display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:center}.dd .dn{font:300 15px/1.4 Urbanist;position:relative;padding:10px 0;max-width:250px}.dd .dn b{display:block;font:600 19px Urbanist}.dd .dn.l{text-align:right;justify-self:end}.dd .col{display:grid;gap:50px}.dd .dl{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}.dd .dl path{fill:none;stroke:#000;stroke-width:1.3;stroke-dasharray:var(--L);stroke-dashoffset:var(--L);transition:stroke-dashoffset 1s cubic-bezier(.6,0,.2,1)}.dd .dl.on path{stroke-dashoffset:0}.dd .dl circle{fill:var(--o);stroke:#000;stroke-width:1.3;opacity:0;transition:opacity .4s .8s}.dd .dl.on circle{opacity:1}.dd .stg2{gap:clamp(70px,9vw,120px)}
+@media(max-width:900px){.dd .stg2{grid-template-columns:1fr;gap:30px}.dd .dl{display:none}.dd .dn.l{text-align:left;justify-self:start}}
+.ln2{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;min-height:540px}.ln2 h2{position:absolute;top:-40px;left:0;right:0;text-align:center;font-size:clamp(30px,3.6vw,52px);z-index:3}
+.ln2 .band{background:#fff;color:#000;clip-path:polygon(0 0,100% 18%,92% 100%,0 86%);margin-left:-40px;padding:90px 120px 90px 40px;min-height:380px;display:flex;align-items:center}.ln2 ul{margin:0;padding:0;list-style:none;font:600 17px/1.5 Urbanist}.ln2 li:before{content:"· ";font-weight:900}.ln2 .im img{border-radius:20px;max-width:440px;margin:0 auto;cursor:zoom-in}
+@media(max-width:860px){.ln2{grid-template-columns:1fr}.ln2 .band{margin:0;padding:50px 30px}}
+.fo{position:relative;text-align:center;padding:30px 0}.fo h2{font-size:clamp(30px,3.6vw,52px);color:#000}.fo p{font:600 clamp(15px,1.5vw,19px)/1.55 Urbanist;max-width:900px;margin:60px auto 0}.fo .sh1{position:absolute;right:-6%;top:60px;width:30%;height:300px;background:#FF7A1A;clip-path:polygon(0 38%,60% 0,100% 12%,100% 60%,40% 100%)}.fo .sh2{position:absolute;left:-6%;bottom:-40px;width:18%;height:240px;background:#6A89B5;clip-path:polygon(40% 0,100% 8%,50% 100%,0 100%,0 30%)}
+.fin{text-align:center;min-height:620px;position:relative;display:flex;align-items:center;justify-content:center}.fin .p1,.fin .p2{position:absolute;width:min(560px,60%);border:6px solid #111;border-radius:30px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.7)}.fin img{aspect-ratio:996/438;object-fit:cover}.fin .p1{left:5%;bottom:40px;transform:perspective(900px) rotateX(6deg) rotateY(-10deg) rotateZ(2deg)}.fin .p2{right:4%;top:20px;transform:perspective(900px) rotateX(-6deg) rotateY(-14deg) rotateZ(-4deg)}
+@media(max-width:860px){.fin{flex-direction:column;gap:20px;min-height:0}.fin .p1,.fin .p2{position:static;width:100%;transform:none}}
+.dd .stg2 .lph{width:520px;max-width:100%}.ph2 .lph{width:min(500px,42vw)}@media(max-width:860px){.ph2 .lph{width:100%}.dd .stg2 .lph{width:100%}}.fx{position:absolute;right:4vw;bottom:-1.2vw;width:min(19vw,330px);pointer-events:none;transform-origin:50% 100%;animation:fxb 4.6s ease-in-out infinite}.fx img{clip-path:inset(0 0 2.2% 0);filter:drop-shadow(0 18px 24px rgba(0,0,0,.5))}
+.lid{position:absolute;border-radius:50%;background:radial-gradient(ellipse at 50% 30%,#ff9a2e,#f07a14 70%,#c85d0a);border-bottom:3px solid #4a2410;transform-origin:50% 0;transform:scaleY(0);animation:blk 4.2s infinite}
+@keyframes blk{0%,90%,100%{transform:scaleY(0)}93%,95%{transform:scaleY(1)}}
+@keyframes fxb{0%,100%{transform:rotate(0)}50%{transform:rotate(1.5deg) translateY(-6px)}}
+@media(max-width:900px){.fx{position:relative;right:auto;width:46vw;margin:10px auto 0;display:block}.tt{margin-top:30px}.cv h1{font-size:19vw}}
+.pills .pp{opacity:0;translate:0 -90vh}.pills.go .pp{opacity:1;animation:drop 1.5s cubic-bezier(.45,0,.9,.5) both}
+.pills.go .pp:nth-child(1){animation-delay:.05s}.pills.go .pp:nth-child(2){animation-delay:.35s}.pills.go .pp:nth-child(3){animation-delay:.65s}.pills.go .pp:nth-child(4){animation-delay:.95s}
+.pills .dot{opacity:0;transition:opacity .6s 1.6s}.pills.go .dot{opacity:1}
+@keyframes drop{0%{translate:0 -90vh;opacity:1}52%{translate:0 0}64%{translate:0 -34px}74%{translate:0 0}82%{translate:0 -12px}90%,100%{translate:0 0}}
+@media(prefers-reduced-motion:reduce){.pills .pp{opacity:1;translate:0 0}.pills.go .pp{animation:none}}
+.hit{cursor:pointer;outline:none}.hit .nd{transition:fill .3s,r .3s,opacity .5s}.hit:hover .nd,.hit:focus-visible .nd{fill:#FF7A1A}.nd.act{fill:#FF7A1A}.rd .lb2.cur{color:#FF7A1A}.rd .lb2.cur span{color:#555}
+.rd .lb2{pointer-events:auto}
+.rdp{position:absolute;left:27%;top:38%;width:46%;height:26%;display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:center;z-index:3}.rdp[hidden]{display:none}.rdp .tx{position:relative;z-index:2}.rdp .n{font:400 14px 'Lilita One';color:var(--o);letter-spacing:.1em}.rdp h3{font:400 clamp(18px,2.1vw,30px)/1 'Lilita One';text-transform:uppercase;margin:4px 0 6px}.rdp p{margin:0;font:400 clamp(11px,1vw,14px)/1.35 Urbanist;color:#444}
+.rdp .scr{position:relative;aspect-ratio:16/9;background:#000;border:5px solid #1b1b1b;border-radius:22px;overflow:hidden;box-shadow:0 0 0 2px #555,0 18px 40px rgba(0,0,0,.35);align-self:center}.rdp .scr:after{content:'';position:absolute;inset:0;border-radius:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);pointer-events:none}.rdp .scr i{position:absolute;left:7px;top:50%;width:6px;height:18px;margin-top:-9px;border-radius:4px;background:#000;z-index:2}.rdp .scr img{width:100%;height:100%;object-fit:cover;border-radius:0}.rdp.sw .tx,.rdp.sw img{animation:swi .5s both}@keyframes swi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rdp .ct{display:flex;align-items:center;gap:8px;margin-top:8px}.rdp .ct button{all:unset;cursor:pointer;width:34px;height:34px;border:1px solid #000;border-radius:50%;display:grid;place-items:center;font:600 16px Urbanist;transition:.2s}.rdp .ct button:hover{background:#000;color:#fff}.rdp .ct a{margin-left:8px;font:600 12px Urbanist;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid #000;color:#000}.rdp .ct a:hover{color:var(--o);border-color:var(--o)}
+.rhint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:400 clamp(18px,2vw,28px) 'Lilita One';text-transform:uppercase;color:#bbb;pointer-events:none;transition:opacity .3s}.rdp:not([hidden])~.rhint{opacity:0}
+@media(max-width:860px){.rdp{position:static;width:auto;height:auto;grid-template-columns:1fr;margin-bottom:20px}.rd{aspect-ratio:auto}.rd svg{position:static;height:auto;aspect-ratio:12/7}.rd .lb2{display:none}}
+.ftb{position:relative;z-index:3;background:#000;display:grid;grid-template-columns:1.5fr 1.2fr 1.1fr .8fr .9fr;border-top:1px solid rgba(255,255,255,.22);margin-top:60px}.ftb>*{padding:18px 20px 22px;border-right:1px solid rgba(255,255,255,.22);text-decoration:none;color:#fff;transition:background .25s,color .25s}.ftb>*:last-child{border:0}.ftb small{display:block;font:500 12px Urbanist;color:rgba(255,255,255,.65)}.ftb b{display:block;font:600 15px/1.3 Urbanist;margin-top:5px}.ftb i{font-style:normal;color:var(--o)}.ftb a:hover{background:var(--o);color:#000}.ftb a:hover small{color:#000}
+@media(max-width:900px){.ftb{grid-template-columns:1fr 1fr}.ftb>*{border-bottom:1px solid rgba(255,255,255,.22)}}
+.stt .sti{cursor:pointer;position:relative;transition:transform .3s;outline:none}.stt .sti:hover,.stt .sti:focus-visible,.stt .sti.on{transform:translateY(-6px)}
+.stt .dg{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;margin:18px 20px 8px 0;max-width:280px}.stt .dg i{aspect-ratio:1;border-radius:50%;background:#e4e4e4;transition:background .25s,transform .25s}.stt .dg i.f{background:var(--o);transform:scale(1.15)}.stt .dg i.l{background:#c24e00;transform:scale(1.15)}
+.stt .sti em{display:block;font:600 13px Urbanist;font-style:normal;color:#000;min-height:20px;opacity:0;transition:opacity .3s}.stt .sti:hover em,.stt .sti:focus-visible em,.stt .sti.on em{opacity:1}
+.sbh{text-align:center;margin:0 auto 70px;max-width:760px}.sbh small{font:600 12px Urbanist;letter-spacing:.2em;text-transform:uppercase;color:var(--o)}.sbh h2{font:400 clamp(30px,4vw,56px)/1 'Lilita One';text-transform:uppercase;margin:10px 0 0;color:#fff}
+.sb{display:flex;justify-content:center;align-items:flex-start;gap:clamp(30px,5vw,80px);margin-bottom:110px;flex-wrap:wrap}
+.sf{position:relative;margin:0;width:clamp(240px,27vw,360px)}.sf .im{border-radius:44px;overflow:hidden;aspect-ratio:3/4;background:#222;box-shadow:0 24px 50px rgba(0,0,0,.5)}.sf .im img{width:100%;height:100%;object-fit:cover;display:block}.sf .fx2{background:radial-gradient(circle at 50% 70%,#f5c27a,#c9772b 60%,#6b3d17);display:flex;align-items:flex-end;justify-content:center}.sf .fx2 img{width:92%;height:auto;object-fit:contain}
+.sf.f1{rotate:-3deg}.sf.f2{translate:0 70px;rotate:2deg}.sf.f3{translate:0 -20px;rotate:-2deg}
+.sf .gb,.sf .bp{position:absolute;z-index:3;font:500 15px/1.15 Urbanist;padding:12px 22px;border-radius:30px;white-space:nowrap;animation:fl 5s ease-in-out infinite}.sf .gb{background:#e6e6e6;color:#222}.sf .bp{background:#0b4fc2;color:#fff;max-width:200px;white-space:normal}.sf .gb:before{content:'';position:absolute;left:14px;bottom:-12px;width:10px;height:10px;border-radius:50%;background:#e6e6e6;box-shadow:-9px 8px 0 -2px #e6e6e6}
+.sf .bp:nth-of-type(2){animation-delay:-1.6s}.sf .bp:nth-of-type(3){animation-delay:-3s}@keyframes fl{50%{transform:translateY(-8px)}}
+.sf figcaption{margin-top:26px;color:#fff;font:600 16px/1.2 Urbanist;display:grid;grid-template-columns:30px 1fr;column-gap:12px}.sf figcaption b{grid-row:span 2;width:30px;height:30px;border-radius:50%;background:var(--o);color:#000;display:grid;place-items:center;font:400 16px 'Lilita One'}.sf figcaption em{font:300 14px/1.4 Urbanist;font-style:normal;color:rgba(255,255,255,.65);margin-top:4px}
+@media(max-width:860px){.sf.f2,.sf.f3{translate:none}.sf{width:min(80vw,340px)}.sb{gap:70px}}
+.fx{animation:none!important}.fx .fj{position:relative;transform-origin:50% 100%;animation:fxj 1.5s cubic-bezier(.3,.1,.3,1) .5s both,fxb 4.6s ease-in-out 2.1s infinite}
+@keyframes fxj{0%{transform:translate(70vw,60vh) rotate(25deg) scale(.7);opacity:0}8%{opacity:1}45%{transform:translate(18vw,-26vh) rotate(-14deg) scale(1.05)}70%{transform:translate(2vw,-9vh) rotate(5deg) scale(1)}84%{transform:translate(0,0) scale(1.1,.8)}93%{transform:translate(0,-2vh) scale(.96,1.05)}100%{transform:none;opacity:1}}
+.fx:after{content:'';position:absolute;left:12%;right:12%;bottom:-6px;height:14px;border-radius:50%;background:rgba(0,0,0,.6);filter:blur(8px);opacity:0;animation:fxs .4s ease 1.85s both}@keyframes fxs{to{opacity:.7}}
+@media(prefers-reduced-motion:reduce){.fx .fj{animation:fxb 4.6s ease-in-out infinite}}
+/* storyboard fit */
+.sf{width:clamp(230px,24vw,320px)}.sb{gap:clamp(36px,6vw,90px);flex-wrap:nowrap}.sf .bp{max-width:170px}
+@media(max-width:860px){.sb{flex-wrap:wrap}}
+.vl{padding-bottom:calc(var(--A) + 90px)}.vh{max-width:760px;margin:0 auto 70px;text-align:center}.vh small{font:600 12px Urbanist;letter-spacing:.2em;text-transform:uppercase;color:var(--o)}.vh h2{font:400 clamp(30px,4vw,56px)/1 'Lilita One';text-transform:uppercase;margin:10px 0 18px}.vh p{font:300 17px/1.5 Urbanist;color:#444;margin:0}
+.vg{display:grid;grid-template-columns:1fr 1fr 1.7fr;gap:clamp(24px,4vw,56px);align-items:start;max-width:1100px;margin:0 auto}
+.vf{margin:0}.vf img{width:100%;display:block;border-radius:28px;cursor:zoom-in;box-shadow:0 18px 40px rgba(0,0,0,.18)}.vf.v1{rotate:-3deg}.vf.v2{rotate:2deg;translate:0 40px}.vf.v3{rotate:-1.5deg;translate:0 -10px}
+.vf figcaption{margin-top:18px;font:600 15px/1.2 Urbanist;display:grid;grid-template-columns:34px 1fr;column-gap:10px}.vf figcaption b{grid-row:span 2;color:var(--o);font:400 18px 'Lilita One'}.vf figcaption em{font:300 13px/1.4 Urbanist;font-style:normal;color:#666;margin-top:3px}
+@media(max-width:860px){.vg{grid-template-columns:1fr}.vf.v2,.vf.v3{translate:none}.vf{max-width:420px;margin:0 auto}}
+.rdp.pop{animation:rpop .55s cubic-bezier(.2,1.4,.4,1) both}@keyframes rpop{0%{opacity:0;transform:scale(.55) translateY(24px)}100%{opacity:1;transform:none}}
+.rdp.pop .tx>*{animation:rtx .5s ease both}.rdp.pop .tx>*:nth-child(2){animation-delay:.08s}.rdp.pop .tx>*:nth-child(3){animation-delay:.16s}.rdp.pop .tx>*:nth-child(4){animation-delay:.24s}@keyframes rtx{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.rdp.sw .tx,.rdp.sw img{animation:none}
+.rhint{transition:opacity .3s}.rd.go .rhint{opacity:0}
+.sbd{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 44px;max-width:1120px;margin:20px auto 0;counter-reset:x}
+.sbp{position:relative;margin:0}.sbp .fr{position:relative;aspect-ratio:4/3;border:2px solid #fff;border-radius:14px;overflow:hidden;background:#111}.sbp .fr img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
+.sbp .fx2{background:radial-gradient(circle at 50% 75%,#f5c27a,#c9772b 60%,#6b3d17);display:flex;align-items:flex-end;justify-content:center}.sbp .fx2 img{width:auto;height:96%;object-fit:contain}
+.sbp .sn{position:absolute;left:10px;top:10px;font:400 14px 'Lilita One';font-style:normal;background:#fff;color:#000;border-radius:6px;padding:2px 8px}
+.sbp .sp{position:absolute;right:12px;top:12px;background:#fff;color:#000;font:600 14px Urbanist;padding:10px 16px;border-radius:18px 18px 4px 18px;z-index:2}
+.sbp .pg,.sbp .pb,.sbp .po{position:absolute;z-index:3;font:500 14px/1.2 Urbanist;padding:10px 18px;border-radius:30px;max-width:210px;box-shadow:0 8px 22px rgba(0,0,0,.45);animation:fl 5s ease-in-out infinite}.sbp .pg{background:#e6e6e6;color:#222}.sbp .pb{background:#0b4fc2;color:#fff;animation-delay:-2s}.sbp .po{background:#FF7A1A;color:#000;animation-delay:-3.4s}
+.sbp figcaption{margin-top:16px;color:#fff;font:600 17px/1.2 Urbanist}.sbp figcaption b{display:block;font:600 11px Urbanist;letter-spacing:.2em;text-transform:uppercase;color:var(--o);margin-bottom:6px}.sbp figcaption small{display:block;font:300 14px/1.45 Urbanist;color:rgba(255,255,255,.65);margin-top:6px}
+.sbp:not(:nth-child(3n)):after{content:'→';position:absolute;right:-36px;top:34%;color:var(--o);font:400 24px 'Lilita One'}
+.sbp:nth-child(2){transition-delay:.1s}.sbp:nth-child(3){transition-delay:.2s}.sbp:nth-child(5){transition-delay:.1s}.sbp:nth-child(6){transition-delay:.2s}
+@media(max-width:860px){.sbd{grid-template-columns:1fr;gap:44px}.sbp:after{display:none}}
+.il{position:relative;overflow:hidden}.il:before{content:'';position:absolute;left:50%;top:58%;width:1100px;height:700px;translate:-50% -50%;background:radial-gradient(closest-side,rgba(255,122,26,.38),rgba(255,122,26,.12) 55%,transparent);pointer-events:none}.il .wd{position:relative}
+.il h2 mark{background:none;color:#000;position:relative;display:inline-block;padding:0 .18em;z-index:0}.il h2 mark:before{content:'';position:absolute;inset:6% 0 2%;background:var(--o);transform:skewX(-6deg) scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.7,0,.2,1) .5s;z-index:-1}.il h2.in mark:before{transform:skewX(-6deg) scaleX(1)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px auto 56px;max-width:900px}.chips span{border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:9px 18px;font:500 14px Urbanist;color:#fff;transition:.25s}.chips span:hover{background:var(--o);border-color:var(--o);color:#000;transform:translateY(-3px)}
+.il .pan>div{transition:transform .4s,filter .4s}.il .pan>div:hover{transform:translateY(-8px) scale(1.015);filter:drop-shadow(0 0 34px rgba(255,122,26,.65))}
+.pw2{position:relative;height:100%}.pw2 img{display:block;width:100%}
+.tg2{position:absolute;z-index:3;background:#fff;color:#000;font:400 14px 'Lilita One';font-style:normal;padding:6px 14px 7px;border-radius:30px;box-shadow:0 8px 22px rgba(0,0,0,.35);animation:fl 4.5s ease-in-out infinite}.tg2 small{display:block;font:500 10px Urbanist;letter-spacing:.06em;text-transform:uppercase;color:var(--o);margin-top:1px}.tg2:after{content:'';position:absolute;left:50%;bottom:-9px;width:12px;height:12px;background:#fff;rotate:45deg;translate:-50% -50%;border-radius:2px}.tg2.ot{background:var(--o);color:#000}.tg2.ot small{color:#000}.tg2.ot:after{background:var(--o)}
+.ftb{grid-template-columns:1fr 1fr!important}.ftb>*{padding:26px 28px 30px!important}.ftb>a:last-child{border-right:0!important;text-align:right}.ftb b{font-size:clamp(20px,2.4vw,32px)!important}
+.rdp .dsp{display:none}.rdp.ds{grid-template-columns:.8fr 1.2fr;left:24%;width:52%;top:34%;height:34%}.rdp.ds .scr{display:none}.rdp.ds .dsp{display:block}
+.dsp .sws{display:flex;gap:18px}.dsp .sws span{display:flex;flex-direction:column;align-items:center;font:600 12px Urbanist;color:#000;gap:2px}.dsp .sws i{width:62px;height:62px;border-radius:50%;background:var(--c);display:block;margin-bottom:6px;box-shadow:0 8px 18px rgba(0,0,0,.18);transition:transform .3s}.dsp .sws span:hover i{transform:scale(1.12)}.dsp .sws small{font:400 11px Urbanist;color:#666}
+.dsp .tys{display:flex;align-items:center;gap:14px;margin-top:14px;border-top:1px solid #ddd;padding-top:12px}.dsp .tys b{font:800 40px/1 Inter,Urbanist,sans-serif;color:#000}.dsp .tys strong{display:block;font:700 14px Inter,Urbanist,sans-serif}.dsp .tys small{font:400 12px Urbanist;color:#666}
+.dsp .tks{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.dsp .tks span{border:1px solid #000;border-radius:20px;padding:4px 11px;font:600 11px Urbanist}
+@media(max-width:860px){.rdp.ds{left:auto;width:auto;top:auto;height:auto}}
+.rdp .fwp{display:none}.rdp.fl{grid-template-columns:.7fr 1.3fr;left:22%;width:56%;top:34%;height:34%}.rdp.fl .scr{display:none}.rdp.fl .fwp{display:block}
+.fws{display:grid;grid-template-columns:repeat(4,1fr);position:relative;gap:6px;padding-top:6px}.fws:before{content:'';position:absolute;left:12%;right:12%;top:25px;height:2px;background:repeating-linear-gradient(90deg,#000 0 8px,transparent 8px 14px)}
+.st1{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;opacity:0}.st1 i{width:38px;height:38px;border-radius:50%;background:#000;color:#fff;display:grid;place-items:center;font:400 16px 'Lilita One';font-style:normal;position:relative;z-index:1}.st1 b{font:700 12.5px Urbanist;margin-top:5px;color:#000}.st1 small{font:400 11px/1.25 Urbanist;color:#666;max-width:90px}
+.st1.lp i{background:var(--o)}.st1 u{position:absolute;top:-14px;right:8%;text-decoration:none;font-size:22px;color:var(--o);animation:spn 3s linear infinite;display:block}@keyframes spn{to{transform:rotate(360deg)}}
+.rdp.fl.pop .st1{animation:stin .5s ease both}.rdp.fl.pop .st1:nth-child(1){animation-delay:.35s}.rdp.fl.pop .st1:nth-child(2){animation-delay:.6s}.rdp.fl.pop .st1:nth-child(3){animation-delay:.85s}.rdp.fl.pop .st1:nth-child(4){animation-delay:1.1s}@keyframes stin{from{opacity:0;transform:translateY(12px) scale(.8)}to{opacity:1;transform:none}}
+@media(max-width:860px){.rdp.fl{left:auto;width:auto;top:auto;height:auto}.fws{grid-template-columns:1fr 1fr;row-gap:16px}.fws:before{display:none}}
+.rdp p b{color:#000;font-weight:800}.rdp.noimg{grid-template-columns:1fr;width:40%;left:30%}.rdp.noimg .scr{display:none}.rdp.noimg p{font-size:clamp(13px,1.25vw,18px);line-height:1.45}.rdp.noimg h3{font-size:clamp(22px,2.6vw,38px)}
+@media(max-width:860px){.rdp.noimg{width:auto;left:auto}}
+.an{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0 18%;align-items:end;max-width:1100px;margin:110px auto 0}.an .am{position:relative;border:8px solid #000;border-radius:34px;outline:2px solid rgba(255,255,255,.35);overflow:hidden;background:#000}.an .am img{display:block;width:100%;cursor:zoom-in}
+.an .dt{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--o);box-shadow:0 0 0 6px rgba(255,122,26,.35);translate:-50% -50%;animation:pls 2s ease-in-out infinite}@keyframes pls{50%{box-shadow:0 0 0 12px rgba(255,122,26,0)}}
+.an .ln{position:absolute;left:calc(var(--x)*.5 + 0px);top:calc(var(--y)*.62);right:25%;height:calc(100% - var(--y)*.62 - 90px);border-top:1px solid #fff;border-right:1px solid #fff;pointer-events:none;transform-origin:left;transition:clip-path 1.1s ease .5s;clip-path:inset(0 100% 0 0)}.an.in .ln{clip-path:inset(0)}
+.an .at{padding-bottom:6px}.an .at h3{font:600 20px Urbanist;color:#fff;margin:0 0 18px}.an .at ul{margin:0;padding:0;list-style:none}.an .at li{font:300 16px/1.45 Urbanist;color:rgba(255,255,255,.7);padding-left:16px;position:relative;margin-bottom:8px}.an .at li:before{content:'';position:absolute;left:0;top:.65em;width:4px;height:4px;border-radius:50%;background:var(--o)}
+@media(max-width:860px){.an{grid-template-columns:1fr;gap:26px}.an .ln{display:none}}
+.an{grid-template-columns:1fr 1fr!important;gap:44px 18%!important;align-items:start!important}.an .amw{position:relative;grid-column:1}.an .at{grid-column:2;grid-row:2}
+.an .ln{left:var(--x)!important;top:var(--y)!important;right:auto!important;width:calc(100% - var(--x) + 44% - 22px);height:calc(100% - var(--y) + 58px)!important;border-radius:0 0 0 0;z-index:3}
+.an .dt{z-index:4}
+.an .at h3{text-transform:none!important}
+@media(max-width:860px){.an .at{grid-column:1;grid-row:auto}.an .amw .ln{display:none}}
+.cast{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:14px;max-width:1100px;margin:0 auto 14px;height:min(46vw,470px)}.cast .cp{position:relative;background:var(--b);overflow:hidden;display:flex;align-items:flex-end;justify-content:center;transition:transform .4s}.cast .cp svg{height:96%;width:100%;transition:transform .5s cubic-bezier(.3,1.4,.5,1)}.cast .cp:hover svg{transform:translateY(-8px) scale(1.04)}
+.cast .cp span{position:absolute;left:14px;top:12px;font:400 15px 'Lilita One';background:#000;color:#fff;padding:4px 12px;border-radius:20px}
+.cast .c2{clip-path:polygon(0 0,60% 3%,100% 0,100% 100%,0 100%)}.cast .c3{clip-path:polygon(0 3%,45% 0,100% 4%,100% 100%,0 100%)}
+.cast2{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;max-width:1100px;margin:0 auto 90px}.cast2>div{padding:26px 28px;color:#fff;min-height:130px}.cast2 b{display:block;font:400 clamp(17px,1.8vw,24px)/1.1 'Lilita One';text-transform:uppercase;margin-bottom:8px}.cast2 small{font:500 14px/1.4 Urbanist;opacity:.9}
+@media(max-width:860px){.cast{grid-template-columns:1fr;height:auto}.cast .cp{height:340px}.cast2{grid-template-columns:1fr}}
+.cg{display:grid;grid-template-columns:2.1fr 1fr;gap:20px;max-width:1100px;margin:90px auto 0;height:min(46vw,440px)}.cp{position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.cp.c1{background:#6A89B5;clip-path:polygon(0 0,100% 6%,100% 100%,0 100%)}.cp.c2{background:#ffcc08;clip-path:polygon(0 5%,45% 0,100% 8%,100% 100%,0 100%)}.cp.c3{background:#63387f;clip-path:polygon(0 8%,55% 0,100% 5%,100% 100%,0 100%)}
+.cp .ch{display:block;max-width:none;transition:transform .45s cubic-bezier(.3,1.6,.5,1);transform-origin:50% 100%;filter:drop-shadow(0 14px 18px rgba(0,0,0,.28))}.cp.c1 .a{height:92%;margin-right:-4%}.cp.c1 .b{height:68%;margin-left:6%}.cp.c2 .ch{height:84%}.cp.c3 .ch{height:78%}
+.cp:hover .ch{transform:translateY(-14px) scale(1.04)}.cp.c1:hover .b{transform:translateY(-10px) rotate(3deg) scale(1.05)}
+.cp em{position:absolute;left:14px;top:26px;font:400 14px 'Lilita One';font-style:normal;background:#fff;color:#000;border-radius:20px;padding:5px 14px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+@media(max-width:860px){.cg{grid-template-columns:1fr;height:auto}.cp{height:340px}}
+
+/* brochure mockup */
+.bromk{display:grid;gap:84px;margin:40px 0 0;padding:90px 4% 100px;border-radius:28px;position:relative;overflow:hidden;background:radial-gradient(120% 90% at 25% 15%,#f1e9de,#dcd0bf 62%,#cdbfaa),#d9cdbd;box-shadow:inset 0 0 90px rgba(90,60,30,.18)}
+.bromk:before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(92deg,rgba(255,255,255,.06) 0 2px,rgba(80,50,20,.03) 2px 5px);mix-blend-mode:multiply}
+.bromk .bsh{position:relative;width:min(940px,100%);margin:0 auto;background:#fff;border:0;border-radius:3px;transform:perspective(1800px) rotateX(7deg) rotateZ(-1.4deg);transform-origin:50% 100%;transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s;box-shadow:0 1px 2px rgba(0,0,0,.2),0 14px 22px -8px rgba(70,45,20,.35),0 44px 60px -22px rgba(70,45,20,.5),0 80px 90px -40px rgba(70,45,20,.35)}
+.bromk .bsh.b2{transform:perspective(1800px) rotateX(7deg) rotateZ(1.1deg)}
+.bromk .bsh:hover{transform:perspective(1800px) rotateX(2deg) rotateZ(0) translateY(-8px);box-shadow:0 2px 3px rgba(0,0,0,.2),0 24px 34px -10px rgba(70,45,20,.4),0 70px 80px -26px rgba(70,45,20,.5)}
+.bromk .bsh img{display:block;width:100%;height:auto;border:0!important;border-radius:3px}
+.bromk .bsh:after{content:"";position:absolute;inset:0;border-radius:3px;pointer-events:none;background:linear-gradient(90deg,transparent 32.6%,rgba(0,0,0,.13) 33.2%,rgba(255,255,255,.32) 33.7%,transparent 34.8%,transparent 65.2%,rgba(0,0,0,.13) 66.1%,rgba(255,255,255,.32) 66.6%,transparent 67.7%),linear-gradient(118deg,rgba(255,255,255,.32),transparent 32%,rgba(0,0,0,.07) 100%);mix-blend-mode:multiply;opacity:.9}
+.bromk .bsh .tape{position:absolute;z-index:3;left:50%;top:-14px;width:110px;height:30px;margin-left:-55px;transform:rotate(-3deg);background:linear-gradient(180deg,rgba(236,222,170,.85),rgba(222,206,150,.78));box-shadow:0 2px 4px rgba(0,0,0,.18)}
+.bromk .bsh.b2 .tape{transform:rotate(2.5deg);left:18%}
+@media(max-width:700px){.bromk{padding:50px 14px 60px;gap:56px}.bromk .bsh,.bromk .bsh.b2{transform:none}}
+.s.cl{background:radial-gradient(90% 80% at 15% 10%,#fff6ec,transparent 60%),linear-gradient(160deg,#fff0e0,#ffe0c4 62%,#f8d3bb)!important}.s.cl .bl3 .b{filter:drop-shadow(0 14px 18px rgba(150,70,20,.28))}.s.cl .bl3 small{color:#8a5a3c}
+/* colour swatches: soft glossy pebbles with tint dots */
+.bl3 .b{aspect-ratio:1.5;overflow:visible!important;filter:none!important}
+.bl3 .b:before{left:50%!important;top:50%!important;width:min(64%,170px)!important;height:auto!important;aspect-ratio:1;translate:-50% -50%;rotate:0deg!important;border:0!important;border-radius:50%!important;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.6),rgba(255,255,255,0) 40%),var(--c)!important;box-shadow:inset -12px -16px 26px rgba(0,0,0,.2),0 22px 34px -10px color-mix(in srgb,var(--c) 60%,#000 20%),0 0 0 10px color-mix(in srgb,var(--c) 18%,transparent),0 0 0 22px color-mix(in srgb,var(--c) 9%,transparent);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.bl3 .b:after{content:"";position:absolute;left:calc(50% + min(32%,85px) - 6px);top:calc(50% - min(32%,85px) + 4px);width:30px;height:30px;border-radius:50%;background:color-mix(in srgb,var(--c) 45%,#fff);box-shadow:0 6px 10px rgba(0,0,0,.15);border:3px solid #fff}
+.bl3>div:hover .b:before{transform:scale(1.07) rotate(-4deg)}
+/* business validation + growth */
+.bz .wd,.gx .wd{max-width:1240px}
+.bzh small{display:inline-block;font:700 13px Urbanist;letter-spacing:.2em;text-transform:uppercase;color:var(--o);margin-bottom:14px}
+.bzh p{font:400 clamp(17px,1.6vw,21px)/1.45 Urbanist;max-width:640px;margin:20px 0 0}.bz .bzh p{color:#444}.gx .bzh p{color:rgba(255,255,255,.75)}
+.bzt{display:flex;gap:10px;margin:46px 0 26px;flex-wrap:wrap}.bzt button{font:700 15px Urbanist;padding:12px 24px;border-radius:999px;border:2px solid #000;background:#fff;color:#000;cursor:pointer;transition:.25s}.bzt button.on,.bzt button:hover{background:#000;color:#fff}.bzt button.on{box-shadow:5px 5px 0 var(--o)}
+.zpn{display:grid;gap:18px}.zpn>.zr{display:grid;gap:18px}
+.zpn .zc{background:#f4f2ee;border-radius:20px;padding:24px 26px;border:2px solid #000}
+.zpn .zc h4{font:400 20px 'Lilita One';text-transform:uppercase;margin:0 0 4px}.zpn .zc .zq{font:500 14px Urbanist;color:#666;margin:0 0 14px}
+.zpn ul{margin:0;padding:0;list-style:none}.zpn li{position:relative;padding-left:20px;margin:0 0 9px;font:500 16px/1.4 Urbanist;color:#111}.zpn li:before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--o)}
+.zpn .zid{background:#000;color:#fff;display:flex;flex-direction:column;gap:14px;align-items:flex-start}.zpn .zid .zav{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--o),#d777c8);display:grid;place-items:center;font:400 38px 'Lilita One';color:#000}.zpn .zid b{font:400 30px 'Lilita One';text-transform:uppercase;display:block}.zpn .zid span{font:500 15px Urbanist;opacity:.8}.zpn .zid dl{margin:6px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font:500 14px Urbanist}.zpn .zid dt{opacity:.55;text-transform:uppercase;letter-spacing:.1em;font-size:12px;align-self:center}.zpn .zid dd{margin:0}
+.zr1{grid-template-columns:300px repeat(3,minmax(0,1fr))}.zr2{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}.zr3{grid-template-columns:repeat(3,minmax(0,1fr))}.zpn,.zpn>.zr>*{min-width:0}
+@media(max-width:1000px){.zr1{grid-template-columns:1fr 1fr}.zr1 .zid{grid-column:1/-1}.zr2,.zr3{grid-template-columns:1fr}}@media(max-width:620px){.zr1{grid-template-columns:1fr}}
+.zqd2{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;margin:34px 0 34px 34px;min-height:340px}
+.zqd2 .zqc{border-radius:14px;padding:14px 16px;font:500 13px/1.35 Urbanist;color:#222;border:2px solid transparent;transition:.3s}.zqd2 .zqc b{display:block;font:400 17px 'Lilita One';text-transform:uppercase;margin-bottom:4px}.zqd2 .zqc.zt{background:#dbe8f7}.zqd2 .zqc.ze{background:#d9f3dc;border-color:#000;box-shadow:5px 5px 0 var(--o)}.zqd2 .zqc.w{background:#fdf0d2}.zqd2 .zqc.zg{background:#fbdcdc}.zqd2 .zqc:hover{transform:scale(1.03)}
+.zqd2 .zqc.ze b:after{content:" ★";color:var(--o)}
+.zqd2 .zay{position:absolute;left:-30px;top:0;bottom:0;width:20px;display:flex;align-items:center;justify-content:center}.zqd2 .zay i{font:700 11px Urbanist;letter-spacing:.14em;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg);color:#666;font-style:normal;white-space:nowrap}.zqd2 .zax{position:absolute;left:0;right:0;bottom:-26px;text-align:center;font:700 11px Urbanist;letter-spacing:.14em;text-transform:uppercase;color:#666}
+.zcr{counter-reset:n}.zcr li{counter-increment:n;padding:12px 14px 12px 52px;border-radius:12px;background:#fff;margin:0 0 8px;font-weight:600;border:1.5px solid #e2dfd9}.zcr li:before{content:counter(n);left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;background:#000;color:#fff;font:400 15px/28px 'Lilita One';text-align:center}
+.zuc{background:var(--y);border:2px solid #000;border-radius:20px;padding:20px 26px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}.zuc b{font:400 22px 'Lilita One';text-transform:uppercase}.zuc span{font:600 17px/1.4 Urbanist;flex:1;min-width:260px}
+.zstp ol{list-style:none;margin:0;padding:0;position:relative}.zstp li{padding:0 0 18px 34px;position:relative;font:600 16px/1.35 Urbanist}.zstp li:before{content:"";position:absolute;left:8px;top:22px;bottom:-2px;width:2px;background:#bbb}.zstp li:last-child:before{display:none}.zstp li:after{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:#000}
+.ztdy li:before{background:#e0463c}.zwth li:before{background:#2ea663}.ztdy{background:#fdeceb!important}.zwth{background:#e5f6ea!important}
+.zqdf{background:#000;color:#fff;border-radius:20px;padding:28px 30px;display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:center}.zqdf>b{font:400 24px 'Lilita One';text-transform:uppercase;color:var(--y)}.zqdf .zst{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}.zqdf .zst div b{display:block;font:400 clamp(38px,4vw,56px)/1 'Lilita One';color:var(--o)}.zqdf .zst div span{font:500 14px/1.35 Urbanist;color:rgba(255,255,255,.8)}
+@media(max-width:800px){.zqdf{grid-template-columns:1fr}}
+.ztc{display:grid;grid-template-columns:1fr 280px;gap:18px}@media(max-width:900px){.ztc{grid-template-columns:1fr}}
+.zbar{display:grid;grid-template-columns:34px 1fr 150px 34px;gap:10px;align-items:center;margin:0 0 10px;font:600 14px Urbanist}.zbar em{font:400 18px 'Lilita One';font-style:normal;color:#999}.zbar span{line-height:1.25}.zbar u{display:block;height:12px;border-radius:7px;background:#e4e1db;overflow:hidden;text-decoration:none}.zbar u i{display:block;height:100%;width:var(--w);border-radius:7px;background:linear-gradient(90deg,var(--o),#d777c8);animation:bgr 1.2s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i)*.06s)}.zbar b{font:400 20px 'Lilita One';text-align:right}
+@keyframes bgr{from{width:0}}
+@media(max-width:700px){.zbar{grid-template-columns:28px 1fr 60px 30px}}
+.ztam{background:linear-gradient(145deg,#000,#2a1a3a);color:#fff;border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:center;gap:8px}.ztam small{font:700 12px Urbanist;letter-spacing:.16em;text-transform:uppercase;color:var(--y)}.ztam b{font:400 clamp(30px,3vw,42px)/1.05 'Lilita One'}.ztam span{font:500 14px Urbanist;opacity:.75}
+.zpn.zsw{animation:pnin .5s cubic-bezier(.2,.8,.2,1)}@keyframes pnin{from{opacity:0;transform:translateY(18px)}}
+/* interview */
+.ziv{display:grid;grid-template-columns:1fr 300px;gap:22px;align-items:start;margin-top:38px}@media(max-width:1000px){.ziv{grid-template-columns:1fr}}
+.ziv .zmt{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px;grid-column:1/-1}.ziv .zmt span{font:600 14px Urbanist;padding:8px 16px;border-radius:999px;background:#f4f2ee;border:1.5px solid #000}.ziv .zmt b{font-weight:800}
+.zir{background:#f4f2ee;border:2px solid #000;border-radius:18px;padding:18px 22px;margin-bottom:12px;cursor:pointer;transition:.3s}.zir:hover{transform:translateX(4px)}.zir.on{background:#fff;box-shadow:6px 6px 0 var(--o)}
+.zir .zhd{display:grid;grid-template-columns:42px 1fr 110px;gap:14px;align-items:center}.zir .zhd i{width:38px;height:38px;border-radius:50%;background:#000;color:#fff;font:400 18px/38px 'Lilita One';font-style:normal;text-align:center}.zir .zhd b{display:block;font:400 21px 'Lilita One';text-transform:uppercase}.zir .zhd small{font:500 14px Urbanist;color:#555}.zir .zsc{text-align:right;font:400 30px 'Lilita One'}.zir .zsc small{font:600 14px Urbanist;color:#888}
+.zir .zmb{height:8px;border-radius:5px;background:#e0ddd6;margin-top:12px;overflow:hidden}.zir .zmb i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--o),#d777c8);border-radius:5px;animation:bgr 1.2s backwards}
+.zir .znt{max-height:0;overflow:hidden;transition:max-height .45s,margin .45s;font:500 16px/1.55 Urbanist;color:#222}.zir.on .znt{max-height:300px;margin-top:14px}.zir .zrb{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.zir .zrb em{font:700 12px Urbanist;font-style:normal;padding:4px 10px;border-radius:6px;background:#ffeeaa}
+.ztot{position:sticky;top:90px;background:#000;color:#fff;border-radius:22px;padding:28px;text-align:center}.ztot .zring{--p:0;width:190px;height:190px;border-radius:50%;margin:0 auto 14px;background:conic-gradient(var(--o) calc(var(--p)*1%),rgba(255,255,255,.14) 0);display:grid;place-items:center;transition:.8s}.ztot .zring div{width:150px;height:150px;border-radius:50%;background:#000;display:grid;place-items:center}.ztot .zring b{font:400 64px/1 'Lilita One'}.ztot .zring span{display:block;font:600 13px Urbanist;opacity:.6;margin-top:-6px}
+.ztot p{margin:0;font:500 15px/1.4 Urbanist;color:rgba(255,255,255,.8)}.ztot .zvd{display:inline-block;margin-top:12px;padding:6px 14px;border-radius:999px;background:var(--y);color:#000;font:800 13px Urbanist;letter-spacing:.06em;text-transform:uppercase}
+/* flywheel */
+.zfw{display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:50px;align-items:center;margin-top:50px}@media(max-width:1000px){.zfw{grid-template-columns:1fr}}
+.zwh{position:relative;width:100%;max-width:560px;aspect-ratio:1;margin:0 auto}.zwh svg{position:absolute;inset:0;width:100%;height:100%}
+.zwh .zrg{transform-origin:50% 50%;animation:whs 40s linear infinite}@keyframes whs{to{transform:rotate(360deg)}}
+.zwc{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#fff38a,#ffcc08);color:#000;border:0;cursor:pointer;display:grid;place-items:center;text-align:center;font:400 22px/1 'Lilita One';text-transform:uppercase;box-shadow:0 0 60px rgba(255,204,8,.45);animation:wcp 3s ease-in-out infinite}.zwc small{display:block;font:700 11px Urbanist;letter-spacing:.12em;margin-top:4px}@keyframes wcp{50%{transform:translate(-50%,-50%) scale(1.05)}}
+.zwn{position:absolute;width:23%;transform:translate(-50%,-50%);background:#111;border:2px solid rgba(255,255,255,.3);border-radius:18px;color:#fff;padding:12px 8px;text-align:center;cursor:pointer;transition:.3s;font:inherit}.zwn b{display:block;font:400 22px 'Lilita One';text-transform:uppercase}.zwn small{display:block;font:600 11px Urbanist;letter-spacing:.1em;color:var(--y);text-transform:uppercase}
+.zwn:hover{border-color:var(--o)}.zwn.on{background:var(--o);color:#000;border-color:var(--o);transform:translate(-50%,-50%) scale(1.1);box-shadow:0 0 40px rgba(255,122,26,.5)}.zwn.on small{color:#000}
+.zwd2{background:#111;border:2px solid rgba(255,255,255,.2);border-radius:26px;padding:32px;min-height:420px;animation:pnin .5s cubic-bezier(.2,.8,.2,1)}
+.zwd2 .k{font:700 13px Urbanist;letter-spacing:.2em;text-transform:uppercase;color:var(--o)}.zwd2 h3{font:400 clamp(34px,4vw,52px)/1 'Lilita One';margin:8px 0 10px}.zwd2 .zqs{font:500 19px/1.4 Urbanist;color:rgba(255,255,255,.8);margin:0 0 24px}
+.zstk{display:flex;flex-wrap:wrap;gap:14px}.zstk i{font-style:normal;font:700 15px/1.25 Urbanist;color:#000;background:#fff38a;padding:16px 16px 18px;min-width:128px;max-width:200px;box-shadow:5px 7px 14px rgba(0,0,0,.4);transform:rotate(var(--r));animation:pop .5s backwards;animation-delay:calc(var(--i)*.08s)}
+@keyframes pop{from{opacity:0;transform:scale(.6) rotate(var(--r,0))}}
+.zwd2 .zmx{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);font:600 15px Urbanist;color:rgba(255,255,255,.75)}.zwd2 .zmx b{color:var(--y);font:400 28px 'Lilita One';margin-left:6px}
+/* channels */
+.zchc{margin-top:46px}.zch0{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:34px}
+.zch0 .ztm{background:var(--y);color:#000;border-radius:16px;padding:14px 22px;font:600 15px Urbanist}.zch0 .ztm b{display:block;font:400 32px/1 'Lilita One';text-transform:uppercase}
+.zch0 .zfl{display:flex;gap:8px;flex-wrap:wrap}.zch0 .zfl button{font:700 13px Urbanist;padding:10px 16px;border-radius:999px;border:2px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;transition:.25s}.zch0 .zfl button i{width:12px;height:12px;border-radius:50%;background:var(--c)}.zch0 .zfl button.on{background:#fff;color:#000;border-color:#fff}
+.zch0 .zbt{margin-left:auto;font:700 13px Urbanist;padding:10px 18px;border-radius:999px;border:2px solid var(--y);background:transparent;color:var(--y);cursor:pointer}.zch0 .zbt.on{background:var(--y);color:#000}
+.zcg{display:grid;grid-template-columns:1fr 1fr;gap:34px}@media(max-width:1000px){.zcg{grid-template-columns:1fr}}
+.zcg h3{font:400 28px 'Lilita One';text-transform:uppercase;margin:0 0 4px}.zcg h3 span{font:700 11px Urbanist;letter-spacing:.14em;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.14);margin-left:10px;vertical-align:middle}.zcg p.zsb{margin:0 0 16px;color:rgba(255,255,255,.6);font:500 14px Urbanist}
+.zcgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:620px){.zcgs{grid-template-columns:1fr}}
+.zct{position:relative;background:#0e0e0e;border:1.5px solid rgba(255,255,255,.16);border-top:6px solid var(--c);border-radius:16px;padding:16px 18px 18px;transition:.3s;animation:pop .5s backwards;animation-delay:calc(var(--i)*.04s)}.zct:hover{transform:translateY(-5px)}
+.zct small{display:block;font:800 11px Urbanist;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}.zct b{display:block;font:400 21px/1.1 'Lilita One';text-transform:uppercase;margin:6px 0 8px}.zct p{margin:0;font:500 14.5px/1.4 Urbanist;color:rgba(255,255,255,.82)}
+.zct.dim{opacity:.18;filter:grayscale(.6)}.zct.star{box-shadow:0 0 0 2px var(--y),0 0 30px rgba(255,204,8,.25)}.zct.star:after{content:"★ first bet";position:absolute;right:12px;top:12px;font:800 11px Urbanist;color:var(--y);letter-spacing:.06em}
+.zcw{margin-top:40px;display:grid;grid-template-columns:1fr 1.4fr;gap:18px}@media(max-width:900px){.zcw{grid-template-columns:1fr}}
+.zcw .zwk{background:radial-gradient(circle at 30% 30%,#fff38a,#ffcc08);color:#000;border-radius:24px;padding:28px 30px}.zcw .zwk small{font:800 12px Urbanist;letter-spacing:.16em;text-transform:uppercase}.zcw .zwk p{margin:8px 0 0;font:600 clamp(19px,1.8vw,24px)/1.35 Urbanist}
+.zcw .zce{background:#0e0e0e;border:1.5px solid rgba(255,255,255,.2);border-radius:24px;padding:26px 28px}.zcw .zce small{font:800 12px Urbanist;letter-spacing:.16em;text-transform:uppercase;color:var(--o)}.zcw .zce ol{display:flex;gap:10px;align-items:stretch;list-style:none;margin:14px 0 0;padding:0;flex-wrap:wrap}.zcw .zce li{flex:1;min-width:130px;padding:14px;border-radius:14px;background:#1b1b1b;font:600 15px/1.3 Urbanist;position:relative}.zcw .zce li:not(:last-child):after{content:"→";position:absolute;right:-16px;top:50%;transform:translateY(-50%);color:var(--o);font-size:20px;z-index:2}
+
+@media(min-width:861px){#proc{min-height:calc(100vh + 8*62vh)}#proc>.wd{position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding-top:8px;padding-bottom:8px}#proc>.wd h2{margin:0}#proc .rd{width:min(100%,calc((100vh - 170px)*12/7));margin:14px auto 0;flex:none}#proc .rhint{font-size:clamp(16px,1.6vw,24px)}}
+
+#fw.zfw{grid-template-columns:minmax(0,640px) 1fr;gap:56px;align-items:center}
+.zng{position:relative;width:100%;max-width:640px;aspect-ratio:1;margin:0 auto}
+.znc{position:absolute;left:50%;bottom:0;aspect-ratio:1;transform:translateX(-50%);border:1.5px solid rgba(255,255,255,.55);border-radius:50%;pointer-events:none;transition:border-color .4s,box-shadow .4s,background .4s}
+.znc.on{border-color:var(--o);border-width:2.5px;box-shadow:0 0 34px rgba(255,122,26,.4),inset 0 0 40px rgba(255,122,26,.12);background:radial-gradient(circle at 50% 100%,rgba(255,122,26,.07),transparent 70%)}
+.znl{all:unset;position:absolute;left:50%;top:4%;transform:translateX(-50%);width:66%;text-align:center;cursor:pointer;pointer-events:auto;color:#fff;font:inherit}
+.znl b{display:block;font:400 clamp(15px,1.5vw,20px)/1 'Lilita One';text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px;transition:color .3s}
+.znl span{display:block;font:500 clamp(11px,1.05vw,15px)/1.35 Urbanist;color:rgba(255,255,255,.8)}
+.znc.on .znl b{color:var(--o)}
+.znl:hover b{color:var(--y)}
+.znc[data-i="6"] .znl{top:26%;width:80%}.znc[data-i="6"] .znl span{font-size:clamp(10px,.95vw,13px)}
+@media(max-width:900px){#fw.zfw{grid-template-columns:1fr}.znl{width:70%}}
+
+/* slimmer interview board */
+.ziv{grid-template-columns:1fr 230px;gap:44px;margin-top:26px}
+.ziv .zmt{gap:8px}.ziv .zmt span{font:600 12px Urbanist;padding:5px 12px;border:1px solid rgba(0,0,0,.25);background:transparent}
+.zir{background:transparent;border:0;border-bottom:1px solid rgba(0,0,0,.14);border-radius:0;padding:14px 4px;margin:0;box-shadow:none}
+.zir:hover{transform:none;background:rgba(0,0,0,.025)}
+.zir.on{background:transparent;box-shadow:none;border-bottom-color:#000}
+.zir .zhd{grid-template-columns:26px 1fr auto;gap:14px}
+.zir .zhd i{width:24px;height:24px;font:400 12px/24px 'Lilita One';background:transparent;color:#000;border:1.5px solid #000}
+.zir.on .zhd i{background:var(--o);border-color:var(--o);color:#000}
+.zir .zhd b{font:400 16px/1.1 'Lilita One';letter-spacing:.01em}
+.zir .zhd small{font:500 13px Urbanist;color:#666}
+.zir .zsc{font:400 22px 'Lilita One'}.zir .zsc small{font:600 12px Urbanist}
+.zir .zmb{height:3px;margin:10px 0 0 40px;background:rgba(0,0,0,.1)}
+.zir .znt{margin-left:40px;font-size:15px}.zir.on .znt{margin-top:10px}
+.ztot{padding:22px 18px;border-radius:18px}
+.ztot .zring{width:132px;height:132px}.ztot .zring div{width:106px;height:106px}.ztot .zring b{font-size:44px}
+.ztot p{font-size:13px}.ztot .zvd{font-size:11px;padding:5px 12px}
+@media(max-width:1000px){.ziv{grid-template-columns:1fr}}
+
+/* interview as conversation field */
+.ivs .zvx{position:relative;height:960px;margin-top:20px;max-width:1280px;margin-inline:auto}
+.zvs{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.zvs circle{fill:none;stroke:rgba(255,255,255,.1);stroke-width:1.2}.zvs .c0{stroke:rgba(255,255,255,.55);stroke-width:1.5}
+.zvc{position:absolute;left:50%;top:50%;width:400px;height:400px;transform:translate(-50%,-50%);display:grid;place-items:center;text-align:center;color:#fff}
+.zvc .zring{--p:0;width:190px;height:190px;border-radius:50%;margin:0 auto 14px;background:conic-gradient(var(--o) calc(var(--p)*1%),rgba(255,255,255,.14) 0);display:grid;place-items:center}
+.zvc .zring>div{width:152px;height:152px;border-radius:50%;background:#111;display:grid;place-items:center}
+.zvc .zring b{font:400 66px/1 'Lilita One'}.zvc .zring span{display:block;font:600 13px Urbanist;opacity:.6;margin-top:-6px}
+.zvc p{margin:0 auto;font:500 14px/1.4 Urbanist;color:rgba(255,255,255,.75);max-width:220px}
+.zvc .zvd{display:inline-block;margin-top:12px;padding:6px 14px;border-radius:999px;background:var(--y);color:#000;font:800 12px Urbanist;letter-spacing:.06em;text-transform:uppercase}
+.zvd1{display:none;width:300px;animation:pnin .4s ease}.zvd1 small{font:700 11px Urbanist;letter-spacing:.2em;text-transform:uppercase;color:var(--o)}
+.zvd1 h3{font:400 24px/1.05 'Lilita One';text-transform:uppercase;margin:6px 0 4px}.zvd1 .zvn{font:600 14px Urbanist;color:rgba(255,255,255,.6)}.zvd1 .zvn b{font:400 40px 'Lilita One';color:var(--y)}
+.zvd1 p{font:500 13px/1.5 Urbanist;color:rgba(255,255,255,.82);max-width:none;margin:8px 0 0}.zvd1 .zrb{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px}.zvd1 .zrb em{font:700 11px Urbanist;font-style:normal;padding:3px 8px;border-radius:6px;background:rgba(255,238,170,.16);color:#ffeeaa}
+.zvk{all:unset;box-sizing:border-box;position:absolute;width:340px;padding:18px 20px 16px;border-radius:26px;background:#232323;color:#fff;cursor:pointer;display:grid;grid-template-columns:44px 1fr;gap:4px 14px;transition:.35s}
+.zvk:hover,.zvk.on{background:var(--o);color:#000;transform:translateY(-4px) scale(1.02);box-shadow:0 22px 50px rgba(255,122,26,.3)}
+.zvk i{grid-row:1/3;width:44px;height:44px;border-radius:50%;background:#dcdcdc;color:#000;font:400 20px/44px 'Lilita One';font-style:normal;text-align:center}
+.zvk .zvt{display:flex;justify-content:space-between;gap:10px;align-items:baseline}.zvk .zvt b{font:600 15px/1.2 Urbanist}.zvk .zvt em{font:400 15px 'Lilita One';font-style:normal;opacity:.75;white-space:nowrap}
+.zvk .zvq{font:500 12.5px/1.45 Urbanist;color:rgba(255,255,255,.6);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.zvk.on .zvq,.zvk:hover .zvq{color:rgba(0,0,0,.72)}
+.zvk .zvb{grid-column:1/-1;height:3px;background:rgba(255,255,255,.14);border-radius:2px;margin-top:8px;overflow:hidden}.zvk .zvb u{display:block;height:100%;width:var(--w);background:var(--o);text-decoration:none}.zvk.on .zvb{background:rgba(0,0,0,.2)}.zvk.on .zvb u,.zvk:hover .zvb u{background:#000}
+.zvl{position:absolute;width:300px;font:500 13px/1.4 Urbanist;color:#8da4ff;padding-left:14px}.zvl:before{content:'';position:absolute;left:0;top:6px;width:6px;height:6px;border-radius:50%;background:#8da4ff}
+@media(max-width:900px){.ivs .zvx{height:auto;display:flex;flex-direction:column;gap:12px}.zvs{display:none}.zvc{position:static;transform:none;width:auto;height:auto;padding:20px 0}.zvk{position:static!important;width:auto}.zvl{display:none}.zvd1{width:auto}}
+.wd.tv{display:block}.tv>.rv{width:100%;max-width:880px;margin-inline:auto}.tv .sl{margin-inline:auto}
+
+/* affinity map */
+.bz .bzt button{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}.bz .bzt button.on,.bz .bzt button:hover{background:#fff;color:#000;box-shadow:5px 5px 0 var(--o)}
+#biz{padding-bottom:0}.zaf{position:relative;width:100%;overflow:hidden;margin-top:10px}.zafs{position:absolute;top:0;left:0;width:1700px;height:1020px;transform-origin:0 0}
+.zafs svg{position:absolute;inset:0;pointer-events:none}.zbg{fill:none;stroke:rgba(255,255,255,.6);stroke-width:1.5}.zbg2{fill:none;stroke:rgba(255,255,255,.07);stroke-width:1.2}
+.zln{stroke:rgba(255,255,255,.2);stroke-width:1;transition:.3s}.zdt{fill:#dcdcdc;transition:.3s}
+.zal{position:absolute;transform:translate(-50%,-50%);font:700 21px Urbanist;color:#fff;white-space:nowrap;cursor:default;transition:.3s;z-index:2}
+.zab{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:#0a0a0a;display:grid;place-items:center;text-align:center;padding:12px;box-sizing:border-box;opacity:0;transform:scale(.55);transition:opacity .6s,transform .7s cubic-bezier(.2,1.3,.4,1),border-color .3s,background .3s;transition-delay:var(--d),var(--d),0s,0s;z-index:1}
+.zab span{font:500 15px/1.3 Urbanist;color:rgba(255,255,255,.85)}
+.zaf.go .zab{opacity:1;transform:none}
+.zab:hover,.zab.hi{border-color:var(--o);background:#181008}.zab.hi span,.zab:hover span{color:#fff}
+.zab.dim,.zal.dim,.zln.dim,.zdt.dim{opacity:.22!important}.zal.hi{color:var(--o)}.zln.hi{stroke:var(--o);stroke-width:1.6}.zdt.hi{fill:var(--o)}
+.zac{position:absolute;left:550px;top:735px;width:600px;text-align:center;color:#fff;z-index:2}
+.zac small{font:700 12px Urbanist;letter-spacing:.22em;text-transform:uppercase;color:var(--o)}.zac h3{font:400 52px/1 'Lilita One';text-transform:uppercase;margin:6px 0 6px}
+.zac .zrl{font:500 17px Urbanist;color:rgba(255,255,255,.7)}.zac .zmeta{display:flex;justify-content:center;gap:26px;margin-top:10px;font:600 14px Urbanist;color:rgba(255,255,255,.55)}.zac .zmeta b{color:#fff;font-weight:700}
+.zac p{font:500 16px/1.5 Urbanist;color:rgba(255,255,255,.82);margin:14px auto 0;max-width:520px}.zac p b{color:var(--y)}
+.zac .ztm{display:inline-block;margin-top:14px;padding:8px 18px;border-radius:999px;background:var(--y);color:#000;font:800 15px Urbanist}.zac .ztm small{color:#000;opacity:.6;margin-right:8px;letter-spacing:.14em}
+@media(max-width:700px){.zafs{}}
+.bz .bzh p{color:rgba(255,255,255,.75)}
+
+/* gap matrix */
+.gmx .l1{max-width:720px}.gm{margin-top:40px;position:relative;font-family:Urbanist}
+.gmh,.gmr{display:grid;grid-template-columns:210px 1fr 90px;align-items:center}
+.gmh{position:relative;height:40px;margin-bottom:6px}.gmh span{position:absolute;top:0;transform:translateX(-50%);font:500 16px Urbanist;color:#000}
+.gmh{display:block;position:relative}.gmh .gmn{position:absolute;left:210px;right:90px;top:0;height:30px}.gmh .gmn span{top:6px}
+.gmh b{position:absolute;right:0;top:8px;font:700 12px Urbanist;letter-spacing:.14em;text-transform:uppercase;color:#888}
+.gmr{height:78px}.gml{font:500 17px Urbanist;color:#000;padding-right:16px}
+.gmp{position:relative;height:100%;border-bottom:1px solid rgba(0,0,0,.28);background:repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 1px,transparent 1px calc(100%/9))}
+.gmp:after{content:'';position:absolute;right:0;top:0;bottom:0;width:1px;background:rgba(0,0,0,.22)}
+.gmh span{pointer-events:none}.gmd{position:absolute;border-radius:50%;transform:translate(-50%,-50%) scale(0);transition:transform .6s cubic-bezier(.2,1.5,.4,1);transition-delay:var(--d);cursor:default}
+.gm.go .gmd{transform:translate(-50%,-50%) scale(1)}.gmd.em{box-shadow:0 0 0 4px rgba(255,122,26,.45)}.gmd:hover{z-index:3;transform:translate(-50%,-50%) scale(1.25)!important}
+.gmd:hover:after{content:attr(data-n);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;background:#000;color:#fff;font:600 12px Urbanist;padding:5px 10px;border-radius:6px}
+.gmg{text-align:center;font:400 28px 'Lilita One';color:#999}.gmg.up{color:#1f9d55}.gmg.dn{color:#d0392b}
+.gmf{display:flex;justify-content:space-between;gap:40px;margin-top:40px;flex-wrap:wrap}
+.gmlg b,.gmsr b{display:block;font:700 15px Urbanist;margin-bottom:12px}.gmlg div{display:flex;align-items:center;gap:12px;font:500 14px Urbanist;margin-bottom:8px}.gmlg div i{border-radius:50%;display:inline-block;flex:none}
+.gmsr{border-left:1px solid #000;padding-left:30px}.gmsr div{display:grid;grid-template-columns:70px 1fr;font:500 13px Urbanist;margin-bottom:8px}.gmsr span{font:600 15px Urbanist}
+.gnote{font:500 13px/1.5 Urbanist;color:#777;margin-top:26px;max-width:640px}
+@media(max-width:800px){.gmr{grid-template-columns:110px 1fr 54px}.gmh .gmn{left:110px;right:54px}.gml{font-size:13px}.gmsr{border-left:0;padding-left:0}}
+
+/* interview as archetype map */
+.ivs .zia{position:relative;width:100%;overflow:hidden;margin-top:10px}.ivs .zia .zis{position:absolute;top:0;left:0;width:1700px;height:920px;transform-origin:0 0}
+.zis svg{position:absolute;inset:0;pointer-events:none}.zia1{fill:none;stroke:rgba(255,255,255,.4);stroke-width:1.3;stroke-dasharray:10 12}.zia2{fill:none;stroke:rgba(255,255,255,.1);stroke-width:1;stroke-dasharray:6 10}.zia3{fill:none;stroke:rgba(255,255,255,.18);stroke-width:1}
+.zil{stroke:rgba(255,255,255,.28);stroke-width:1;transition:.35s}.zil.on{stroke:var(--o);stroke-width:1.6}.zid{fill:#dcdcdc;transition:.3s;pointer-events:auto;cursor:pointer}.zid.on{fill:var(--o)}
+.zit{position:absolute;width:640px;text-align:center;font:500 14.5px/1.3 Urbanist;color:rgba(255,255,255,.4);pointer-events:none;transition:.3s}.zit.on{opacity:0}
+.zin{all:unset;position:absolute;transform:translateY(-50%);cursor:pointer;color:#fff;max-width:340px;transition:.3s;z-index:2}.zin b{display:block;font:500 21px/1.15 Urbanist}.zin em{display:block;font:600 13px Urbanist;font-style:normal;color:rgba(255,255,255,.5);margin-top:3px}
+.zin.on b{color:var(--o)}.zin.on em{color:var(--y)}
+.zip{position:absolute;width:560px;padding:16px 28px;border:1px solid var(--o);border-radius:44px;background:#000;color:rgba(255,255,255,.88);font:500 14px/1.45 Urbanist;text-align:center;opacity:0;pointer-events:none;transition:.35s;z-index:3}.zip.on{opacity:1}.zip p{margin:0}
+.zip .zrb{display:flex;gap:6px;justify-content:center;margin-top:8px;flex-wrap:wrap}.zip .zrb em{font:700 11px Urbanist;font-style:normal;padding:3px 9px;border-radius:6px;background:rgba(255,238,170,.16);color:#ffeeaa}
+.zih{position:absolute;width:160px;height:160px}.zih .zring{--p:0;width:160px;height:160px;border-radius:50%;background:conic-gradient(var(--o) calc(var(--p)*1%),rgba(255,255,255,.16) 0);display:grid;place-items:center}
+.zih .zring>div{width:130px;height:130px;border-radius:50%;background:#000;display:grid;place-items:center}.zih .zring b{font:400 54px/1 'Lilita One';color:#fff}.zih .zring span{display:block;font:600 12px Urbanist;color:rgba(255,255,255,.6);margin-top:-4px;text-align:center}
+.zhl{position:absolute;width:230px;text-align:right;color:#fff}.zhl b{display:block;font:500 28px Urbanist;margin-bottom:10px}.zhl span{font:500 14px/1.6 Urbanist;color:rgba(255,255,255,.6)}
+.zhv{position:absolute;width:200px;text-align:center}.zhv p{font:500 13px/1.4 Urbanist;color:rgba(255,255,255,.65);margin:10px 0 0}.zhv .zvd{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--y);color:#000;font:800 12px Urbanist;letter-spacing:.06em;text-transform:uppercase}
+.zia .zip.on,.zia .zit{}
+
+/* problem identification + opportunity map */
+.pim .pmh{text-align:center;font-size:clamp(32px,3.6vw,52px)}.pim .pmg{text-align:center;font:400 clamp(22px,2.2vw,30px) 'Lilita One';text-transform:uppercase;margin:60px 0 22px}
+.pmp{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 14px;max-width:1160px;margin:0 auto}.pmp span{font:500 15px Urbanist;padding:13px 24px;border:1px solid rgba(0,0,0,.35);border-radius:999px;color:#000;background:#fff;transition:.25s}.pmp span:hover{background:#000;color:#fff;transform:translateY(-2px)}
+.pmq{text-align:center;font:500 16px Urbanist;margin:14px auto 22px;max-width:760px}.pmk{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;font:500 14px Urbanist;margin-bottom:40px}.pmk span{display:flex;align-items:center;gap:10px}.pmk i{width:15px;height:15px;border-radius:50%;display:inline-block}.pmk .k1{background:#000}.pmk .k2{border:1.5px solid #000}.pmk .k3{background:var(--o)}
+.opm{position:relative;margin-top:10px;padding:6px 0 10px}.opv{position:absolute;top:0;bottom:0;border-left:1.5px dashed rgba(0,0,0,.35)}
+.opr{position:relative;display:grid;grid-template-columns:repeat(4,1fr);height:210px;padding-left:2%}.opr:after{content:'';position:absolute;left:0;right:0;top:58px;border-top:1.5px dashed rgba(0,0,0,.35)}
+.opc{position:relative;padding-left:46px;padding-right:14px}.opn{position:absolute;left:-14px;top:42px;width:32px;height:32px;border-radius:50%;border:1.5px solid #000;background:#fff;z-index:2}.opn:after{content:'';position:absolute;left:50%;top:-8px;bottom:-8px;border-left:1px solid #000;transform:translateX(-50%);display:none}
+.opc:nth-child(odd) .opn{background:#fff}.opc:nth-child(2) .opn,.opc:nth-child(4) .opn{background:#fff}
+.opt{padding-top:28px}.opt b{display:block;font:700 20px/1.2 Urbanist;color:#000;margin-bottom:6px}.opt span{font:500 15px/1.35 Urbanist;color:#222;display:block;max-width:240px}
+.opc ul{list-style:none;margin:0;padding:22px 0 0}.opc li{font:500 15px/1.35 Urbanist;color:var(--o);padding-left:14px;position:relative;margin-bottom:2px}.opc li:before{content:'·';position:absolute;left:0}
+.opc:nth-child(1) .opn,.opc:nth-child(3) .opn{background:#000;border-color:#000}
+@media(max-width:900px){.opv,.opr:after{display:none}.opr{grid-template-columns:1fr;height:auto;padding:0}.opc{padding:10px 0 10px 46px}.opn{top:14px}.opt{padding-top:0}.opc ul{padding-top:0}}
+
+/* colours on black */
+.s.cl{background:#000!important;color:#fff}.s.cl h2,.s.cl .sm,.s.cl .big{color:#fff}.s.cl .tx{color:rgba(255,255,255,.65)}.s.cl .bl3 .n{color:#fff}.s.cl .bl3 small{color:rgba(255,255,255,.6)}
+.s.cl .bl3 .b{filter:drop-shadow(0 18px 30px rgba(255,255,255,.07))!important}.s.cl .bl3 .b:after{border-color:#000}
+
+/* interactive opportunity map */
+.opc{transition:opacity .35s}.opm .opn{transition:background .3s,border-color .3s,transform .3s}
+.opk{position:absolute;left:2px;top:58px;width:100%;height:2px;background:linear-gradient(90deg,var(--o),var(--o));transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.3,.8,.2,1);z-index:1;pointer-events:none}
+.opk:after{content:'';position:absolute;right:-5px;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--o);box-shadow:0 0 0 0 rgba(255,122,26,.6)}
+.opc.on .opk{transform:scaleX(1)}.opc.on .opk:after{animation:opp 1.6s ease-out infinite .7s}
+@keyframes opp{0%{box-shadow:0 0 0 0 rgba(255,122,26,.6)}100%{box-shadow:0 0 0 16px rgba(255,122,26,0)}}
+.opc.on .opn{background:var(--o)!important;border-color:var(--o);transform:scale(1.18)}
+.opc.on .opt b{color:var(--o)}.opc.on .opt span{color:#000}
+.opm.hv .opc:not(.on):not(.fl){opacity:.28}
+.opc ul li{transition:all .35s;width:fit-content;transform-origin:left center}
+.opc.on ul li{background:var(--o);color:#fff;padding:5px 14px 5px 14px;border-radius:999px;margin-bottom:7px;font-weight:700;animation:opop .45s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(var(--k)*.09s + .35s)}
+.opc.on ul li:before{display:none}
+@keyframes opop{from{opacity:0;transform:translateX(-12px) scale(.85)}to{opacity:1;transform:none}}
+.opc[data-u]{cursor:pointer;outline:none}.opc[data-u]:focus-visible .opn{box-shadow:0 0 0 4px rgba(255,122,26,.4)}
+.opm[data-f="n"] .opc:nth-child(even),.opm[data-f="p"] .opc:nth-child(odd){opacity:.14}
+.opm[data-f="i"] .opc .opt,.opm[data-f="i"] .opc ul{opacity:.14}.opm[data-f="i"] .opc:nth-child(even) .opn{background:#fff;transform:scale(1.25);border-width:2.5px}
+.pmk span{cursor:pointer;padding:6px 12px;border-radius:999px;transition:.25s;user-select:none}.pmk span:hover{background:rgba(0,0,0,.06)}.pmk span.on{background:#000;color:#fff}.pmk span.on .k2{border-color:#fff}
+.opm .opx{position:absolute;right:0;top:-34px;font:600 13px Urbanist;color:#777}
+
+/* gate */
+.zhide{display:none!important}
+.zlk{max-width:1180px;margin:44px auto 0;display:grid;grid-template-columns:1fr auto;gap:18px 32px;align-items:center;padding:22px 26px;border:1px solid rgba(255,255,255,.22);border-radius:22px;background:rgba(255,255,255,.04);color:#fff;transition:.5s}
+.zlk .zlt b{display:block;font:400 26px 'Lilita One';text-transform:uppercase;letter-spacing:.01em}.zlk .zlt span{font:500 15px Urbanist;color:rgba(255,255,255,.65)}
+.zlk .zlc{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px}.zlk .zlc i{font:700 14px Urbanist;font-style:normal;padding:8px 16px;border-radius:999px;border:1px dashed rgba(255,255,255,.35);color:rgba(255,255,255,.6);cursor:pointer;transition:.35s}.zlk .zlc i.on{border:1px solid var(--o);background:var(--o);color:#000;animation:zpop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes zpop{from{transform:scale(.7)}to{transform:scale(1)}}
+.zlk .zlb{font:800 15px Urbanist;padding:14px 26px;border-radius:999px;border:2px solid rgba(255,255,255,.3);background:transparent;color:rgba(255,255,255,.5);cursor:not-allowed;transition:.35s}
+.zlk.ok{border-color:var(--o);background:rgba(255,122,26,.1)}.zlk.ok .zlb{background:var(--o);border-color:var(--o);color:#000;cursor:pointer;box-shadow:0 0 0 0 rgba(255,122,26,.6);animation:opp 1.8s ease-out infinite}.zlk.ok .zlb:hover{background:var(--y);border-color:var(--y)}
+.zlk.pop{animation:zlp .8s cubic-bezier(.3,1.4,.5,1)}@keyframes zlp{0%{transform:scale(.96)}60%{transform:scale(1.03)}100%{transform:scale(1)}}
+@media(max-width:800px){.zlk{grid-template-columns:1fr}}
+
+/* gap matrix interactive */
+.gml{display:flex;flex-direction:column;gap:4px;justify-content:center}.gml span{line-height:1.2}
+.gmw{display:flex;gap:2px}.gmw b{cursor:pointer;font:400 17px/1 Urbanist;color:#cfcfcf;transition:.2s}.gmw b.on{color:var(--o)}.gmw b:hover{transform:scale(1.3)}
+.gmr{transition:opacity .3s}.gm:hover .gmr:not(:hover){opacity:.5}
+.gmr:hover .gmp{background-color:rgba(255,122,26,.07)}
+.gmr:hover .gmd:before{content:attr(data-v);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:800 12px Urbanist;color:var(--tc,#fff)}
+.gmd{transition:transform .6s cubic-bezier(.2,1.5,.4,1),opacity .3s;transition-delay:var(--d),0s}.gmd.dim{opacity:.1}
+.gmq{cursor:pointer;padding:6px 12px;margin-left:-12px;border-radius:999px;transition:.25s;outline:none}.gmq:hover{background:rgba(0,0,0,.06)}.gmq.on{background:#000;color:#fff}
+.gms{margin-top:44px;padding:26px 30px;border:1px solid rgba(0,0,0,.2);border-radius:22px;background:#faf7f2}.gmsh b{display:block;font:400 26px 'Lilita One';text-transform:uppercase}.gmsh span{font:500 14px Urbanist;color:#666}
+.gmsb{margin-top:18px;display:grid;gap:12px}.gmb{display:grid;grid-template-columns:200px 1fr 54px;align-items:center;gap:16px;font:600 15px Urbanist}.gmb b{font:400 24px 'Lilita One';text-align:right}
+.gmt{height:14px;border-radius:7px;background:rgba(0,0,0,.08);overflow:hidden}.gmt i{display:block;height:100%;border-radius:7px;background:#8c8c8c;transition:width .7s cubic-bezier(.2,.8,.2,1)}.gmb.em .gmt i{background:var(--o)}.gmb.top b{color:var(--o)}
+@media(max-width:700px){.gmb{grid-template-columns:110px 1fr 44px}}
+
+/* growth engine pinned */
+#grow{padding:0!important}
+#grow>.wd{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:40px;padding-bottom:40px;box-sizing:border-box}
+#grow .bzh{margin-bottom:0}#grow .bzh p{display:none}#grow .zfw{margin-top:26px}
+#grow>.wd:after{content:'Scroll';position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font:700 11px Urbanist;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.sv2{margin-top:clamp(60px,8vw,110px)}.sv2 small{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#FF7A1A;font-weight:600}.sv2 h3{margin:12px 0 0;font-size:clamp(28px,3.4vw,46px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.svg2{display:grid;grid-template-columns:repeat(12,1fr);gap:10px;margin-top:28px}.svg2 figure{margin:0;overflow:hidden;border-radius:16px;background:#ddd;position:relative;cursor:zoom-in}.svg2 img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}.svg2 figure:hover img{transform:scale(1.06)}
+.svg2 .a{grid-column:span 6;aspect-ratio:1.7}.svg2 .b{grid-column:span 3;aspect-ratio:1}.svg2 .c{grid-column:span 6;aspect-ratio:3}.svg2 .d{grid-column:span 3;aspect-ratio:1.2}
+.sv2 .cr{margin-top:14px;font-size:13px;opacity:.65}
+@media(max-width:700px){.svg2 .a,.svg2 .c{grid-column:span 12}.svg2 .b,.svg2 .d{grid-column:span 6}}
+.sv2 h3{text-transform:none!important;letter-spacing:-.02em;font-family:inherit}.sv2 h3:before,.sv2 h3:after{content:none!important}.svg2 .c{aspect-ratio:auto}.svg2 .c img{position:absolute;inset:0;object-position:center top}@media(max-width:700px){.svg2 .c{aspect-ratio:2.4}}
+#grow>.wd{padding-top:calc(var(--A) + 36px);padding-bottom:56px;justify-content:flex-start}#grow .bzh h2{font-size:clamp(30px,3.6vw,54px)}
+.wl .fl{width:clamp(120px,13vw,190px);opacity:0;transform:translateY(40px) rotate(var(--r,0deg)) scale(.9);transition:opacity .6s,transform .8s cubic-bezier(.2,.8,.2,1)}.wl .fl.on{opacity:1;transform:rotate(var(--r,0deg))}.wl .fl.l{left:3%;right:auto;bottom:auto}.wl .fl.r{right:3%;left:auto;bottom:auto}
+.stmt .kid{position:absolute;width:clamp(110px,15vw,230px);height:auto;pointer-events:none;animation:kfl 5s ease-in-out infinite alternate}
+.stmt .ka{left:-40px;top:-10px;width:clamp(100px,13vw,200px);--r:-4deg}.stmt .kb{right:3%;top:-30px;width:clamp(110px,15vw,230px);--r:5deg;animation-delay:-1.5s}.stmt .kc{left:5%;bottom:-10px;width:clamp(100px,13vw,200px);--r:3deg;animation-delay:-3s}.stmt .kd{left:40%;bottom:-40px;width:clamp(90px,11vw,170px);--r:-6deg;animation-delay:-2s}.stmt .ke{right:-40px;bottom:-60px;width:clamp(100px,13vw,200px);--r:-3deg;animation-delay:-4s}
+@keyframes kfl{from{transform:translateY(0) rotate(var(--r,0deg))}to{transform:translateY(-16px) rotate(calc(var(--r,0deg) * -1))}}
+@media(max-width:700px){.stmt .kid{display:none}}@media(prefers-reduced-motion:reduce){.stmt .kid{animation:none}}
+
+.fam{max-width:1000px;margin:64px auto 0;background:#fff;border-radius:34px;padding:clamp(14px,2.4vw,34px);box-shadow:0 30px 80px rgba(255,122,26,.28);position:relative}.fam img{display:block;width:100%;height:auto;cursor:zoom-in}.fam em{position:absolute;left:clamp(18px,3vw,40px);top:clamp(14px,2.4vw,30px);font:900 clamp(18px,2.2vw,30px) Inter;color:#000;font-style:normal;letter-spacing:-.02em}.fam em b{color:var(--o)}
+
+.fm{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:340px;gap:16px;max-width:1100px;margin:36px auto 0}
+.fc{position:relative;overflow:hidden;background:var(--bg);display:flex;align-items:flex-end;justify-content:center}
+.fc.fa{clip-path:polygon(0 0,100% 5%,100% 100%,0 100%)}.fc.fb{clip-path:polygon(0 6%,50% 0,100% 7%,100% 100%,0 100%)}.fc.fc{clip-path:polygon(0 4%,100% 0,100% 100%,0 100%)}.fc.fd{clip-path:polygon(0 5%,45% 0,100% 8%,100% 100%,0 100%)}.fc.fe{clip-path:polygon(0 7%,55% 0,100% 5%,100% 100%,0 100%)}.fc.ff{clip-path:polygon(0 0,100% 6%,100% 100%,0 100%)}
+.fc img{display:block;max-width:none;width:94%;height:88%;object-fit:contain;object-position:50% 100%;margin-bottom:14px;transform-origin:50% 100%;transition:transform .45s cubic-bezier(.3,1.6,.5,1);filter:drop-shadow(0 12px 16px rgba(0,0,0,.28))}
+.fc:hover img{transform:translateY(-12px) scale(1.04)}
+.fc em{position:absolute;left:14px;top:24px;font:400 14px 'Lilita One';font-style:normal;background:#fff;color:#000;border-radius:20px;padding:5px 14px;box-shadow:0 6px 16px rgba(0,0,0,.25);z-index:2}
+@media(max-width:860px){.fm{grid-template-columns:1fr 1fr;grid-auto-rows:280px}}
+
+/* phone/tablet: radial interview diagram becomes a stacked list */
+@media(max-width:860px){
+html,body{overflow-x:clip}
+.ivs .zia{overflow:visible !important;height:auto !important}
+.ivs .zia .zis{position:relative !important;width:100% !important;height:auto !important;transform:none !important;left:0 !important;display:flex;flex-direction:column;gap:12px}
+.zis svg,.zit{display:none !important}
+.zhl{position:relative !important;left:auto !important;top:auto !important;width:100% !important;text-align:center !important;order:0}
+.zhl b{font-size:24px !important}
+.zih{position:relative !important;left:auto !important;top:auto !important;margin:6px auto;order:1}
+.zhv{position:relative !important;left:auto !important;top:auto !important;width:100% !important;order:2}
+.zip{position:relative !important;left:auto !important;top:auto !important;transform:none !important;width:100% !important;display:none;order:3;border-radius:20px !important;padding:16px 18px !important}
+.zip.on{display:block}
+.zin{position:relative !important;left:auto !important;top:auto !important;transform:none !important;max-width:none !important;order:4;padding:13px 16px;border:1px solid rgba(255,255,255,.22);border-radius:14px;box-sizing:border-box;width:100%}
+.zin.on{border-color:var(--o)}
+}
+
+@media(max-width:860px){html,body{overflow-x:hidden !important;max-width:100vw}section,.wd,.sl,.fo,.axh,h2{max-width:100%}.wd,.fo,.sl,section{overflow-x:clip}h2 em{white-space:normal}}
+</style><style id="cstabs-css">.cstabs{display:none}@media(max-width:900px){.cstabs{display:flex;position:fixed;left:8px;right:8px;bottom:8px;z-index:9999;background:rgba(10,10,10,.92);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:5px;gap:2px;overflow-x:auto;scrollbar-width:none}.cstabs::-webkit-scrollbar{display:none}.cstabs a{flex:1 0 auto;text-align:center;font:600 12px/1 Urbanist,Poppins,sans-serif;color:rgba(255,255,255,.7);text-decoration:none;padding:11px 12px;border-radius:999px;white-space:nowrap}.cstabs a.on{background:#fff;color:#000}body{padding-bottom:70px}}</style></head><body>
+<div id="bar"></div>
+
+<header class="cv" id="top"><div class="cb"><div><small>The product</small><b>An AI learning app that makes <i>learning</i> less overwhelming</b></div><div><small>My station</small><b>Co-founder · UX, interaction &amp; product</b></div><div><small>Built for</small><b>Neurodivergent children &amp; parents</b></div><div><small>On stage</small><b>WorldSkills Shanghai, 2026</b></div></div>
+<div class="tt"><h1>EMPALS<span>.</span></h1><div class="fx" aria-hidden="true"><div class="fj"><img src="img/fox.webp" alt=""><i class="lid" style="left:23%;top:31.6%;width:14%;height:10%;rotate:12deg"></i><i class="lid" style="left:47.7%;top:26.8%;width:14%;height:9.8%;rotate:8deg"></i></div></div></div>
+<div class="pl"><span class="pi">UI/UX</span><span class="pi">PRODUCT &amp; STRATEGY</span><span class="pi mid">NEURODIVERGENT LEARNING APP</span><span class="pi">2026</span></div>
+<div class="tg"><p>Helping children with ADHD play, learn and grow, without the overwhelm.</p><p class="r">Learning made gentle, for every child and every home.</p></div>
+</header>
+
+<section class="s k t1" id="take"><div class="wd take">
+ <div class="rv"><h2>The core idea</h2><p class="sub">A journey of <b>comfort and growth</b>, not just a lesson.</p><p class="body">Learning breaks down not for lack of ability, but because the environment does not support executive function, emotional safety and adaptive pacing. EmPals fixes the environment, not the child.</p></div>
+ <div class="ph rv"><div class="tri a"></div><div class="tri b"></div><div class="phone" id="phn"><img src="img/protos.jpg" alt="Alex the fox greets the child" data-z="Alex the fox greets the child during onboarding"></div></div>
+ <div class="r rv"><p>It is about short tasks, instant feedback and meaningful rewards that build trust, confidence and a love for learning, because learning shouldn’t feel like a struggle.</p><b>It should feel like play.</b></div>
+</div></section>
+
+<section class="s w t2"><div class="wd stmt">
+ <h2 class="rv"><b>[Learning]</b> starts<br>with a <i>feeling.</i></h2>
+<img class="kid ka rv" src="img/k1.webp" alt="" aria-hidden="true"><img class="kid kb rv" src="img/k2.webp" alt="" aria-hidden="true"><img class="kid kc rv" src="img/k3.webp" alt="" aria-hidden="true"><img class="kid kd rv" src="img/k4.webp" alt="" aria-hidden="true"><img class="kid ke rv" src="img/k5.webp" alt="" aria-hidden="true">
+ 
+</div></section>
+
+<section class="s k t2"><div class="wd pw">
+ <div class="pills"><div class="pp"><b>100M</b>people with ADHD worldwide</div><div class="pp"><b>42%</b>increase in ADHD diagnoses</div><div class="pp"><b>&lt;20%</b>get structured learning support</div><div class="pp"><b>7.1%</b>of Indian children show ADHD symptoms<div class="dot" style="width:46px;height:46px;left:44%;top:80px"></div><div class="dot" style="width:100px;height:100px;left:-2%;top:290px"></div><div class="dot" style="width:54px;height:54px;left:78%;top:300px"></div></div></div>
+ <div class="rt"><h2 class="rv">Why does learning <em>break down?</em></h2><p class="rv">They want to learn.<br><span>They just can’t <b style="color:#fff;font-weight:400">[start]</b>.</span></p><p class="sm rv">We didn’t begin with a product in mind. We began by listening to families, therapists and teachers.</p></div>
+</div></section>
+
+<section class="s w t4" id="research"><div class="wd">
+ <div class="rs"><div class="rv"><h2>Research</h2><div class="g">Goal:</div><div class="tx">Understand how neurodivergent children learn and what gets in their way. <b>Mixed methods: field observations, caregiver and expert interviews, behaviour mapping, environment analysis and literature review</b>; combining numbers with what we saw in classrooms and therapy rooms.</div></div>
+  <div class="circ rv"><div>Field observations<small>classroom setup, learner behaviour</small></div><div>Interviews<small>parents, therapists, educators</small></div><div>Behaviour mapping<small>attention, triggers, task flow</small></div><div>Environment<small>light, noise, seating, tools</small></div><div>Literature<small>research and best practice</small></div></div></div>
+ <div class="stt rv" id="stt">
+  <div class="sti" tabindex="0" data-lo="7.6" data-hi="15" data-cap="About 1 in 7 to 1 in 13 children"><b class="num" data-to="15" data-lo="7.6"></b><span>ADHD prevalence in the 8–15 age group</span><div class="dg"></div><em></em></div>
+  <div class="sti" tabindex="0" data-hi="83" data-cap="About 8 in every 10 students"><b class="num" data-to="83" data-suf="%"></b><span>of secondary students exceeded 2 hrs recommended screen time</span><div class="dg"></div><em></em></div>
+  <div class="sti" tabindex="0" data-hi="8" data-cap="About 1 in 12 children"><b class="num" data-to="8" data-suf="%"></b><span>of Indian children up to 19 may have a Specific Learning Disorder</span><div class="dg"></div><em></em></div>
+ </div>
+</div></section>
+
+<section class="s w t3"><div class="wd"><div class="wl" id="wl"><div class="fl l" data-t="0" style="top:0%;--r:-4deg"><img src="img/sv3.webp" alt=""></div><div class="fl r" data-t="2" style="top:18%;--r:3deg"><img src="img/sv4.webp" alt=""></div><div class="fl l" data-t="4" style="top:36%;--r:3deg"><img src="img/sv5.webp" alt=""></div><div class="fl r" data-t="6" style="top:54%;--r:-3deg"><img src="img/sv6.webp" alt=""></div><div class="fl l" data-t="8" style="top:72%;--r:-3deg"><img src="img/sv8.webp" alt=""></div><div class="fl r" data-t="10" style="top:86%;--r:4deg"><img src="img/sv9.webp" alt=""></div>
+ <p>Overwhelm</p><p>Distraction</p><p>Frustration</p><p>Low confidence</p><p>Emotional safety</p><p class="on" data-hero="1">And so, EmPals began.</p><p>Play</p><p>Trust</p><p>Consistency</p><p>Confidence</p><p>Growth</p></div></div></section>
+
+<section class="s k t2 mt" id="motivation"><div class="wd">
+ <h2 class="rv">Designing<br><em>motivation</em></h2><p class="lead rv" style="color:rgba(255,255,255,.7)">Applying Octalysis to the learning journey. Pick a stage.</p>
+ <div class="stp rv" id="stp"><button class="on" data-t="Struggle: challenges feel hard, attention is low and progress is unclear. This is where the child arrives.">01 Struggle</button><button data-t="Entry: a welcoming start, clear goals and a safe space. Simple onboarding plus emotional safety.">02 Entry</button><button data-t="Engagement: short tasks, instant feedback and meaningful rewards. Task, feedback, reward.">03 Engagement</button><button data-t="Growth: visible progress, streaks and ownership build confidence, consistency and habit.">04 Growth</button></div>
+ <p class="sx rv" id="sx">Struggle: challenges feel hard, attention is low and progress is unclear. This is where the child arrives.</p>
+ <table class="tb rv"><thead><tr><th>Behavioural insight</th><th>UX implementation</th></tr></thead><tbody><tr><td>Reduce cognitive load</td><td>Chunked tasks, one goal at a time</td></tr><tr><td>Motivation before instruction</td><td>Gamified onboarding, playful interactions</td></tr><tr><td>Progress visibility</td><td>Levels, streaks, progress bars, milestones</td></tr><tr><td>Emotional safety</td><td>No negative feedback; mistakes are part of learning</td></tr></tbody></table>
+ 
+</div></section>
+
+<section class="s w t1 pr" id="proc" style="padding-top:calc(var(--A) + 20px)"><div class="wd">
+ <h2 class="rv">Design process</h2>
+ <div class="rd" id="rd"><div class="rdp" id="rdp" hidden><div class="tx"><span class="n"></span><h3></h3><p></p><div class="ct"><button id="rpv" aria-label="Previous">←</button><button id="rnx" aria-label="Next">→</button><a href="#">Go <b>↗</b></a></div></div><div class="scr"><img alt=""><i></i></div><div class="dsp"><div class="sws"><span style="--c:#FF7A1A"><i></i>Orange<small>#FF7A1A</small></span><span style="--c:#9AA8B9"><i></i>Mist grey<small>#9AA8B9</small></span><span style="--c:#6A89B5"><i></i>Steel blue<small>#6A89B5</small></span></div><div class="tys"><b>Aa</b><div><strong>Inter</strong><small>H1 28 · H2 20 · Body 16 · Small 14</small></div></div><div class="tks"><span>48 dp targets</span><span>1 action per screen</span><span>60-30-10</span></div></div><div class="fwp"><div class="fws"><div class="st1"><i>1</i><b>Entry</b><small>Alex says hello</small></div><div class="st1"><i>2</i><b>Setup</b><small>1–10 feeling slider</small></div><div class="st1 lp"><i>3</i><b>Learning loop</b><small>Task → feedback → reward</small><u>↻</u></div><div class="st1"><i>4</i><b>Progress</b><small>A small win he can see</small></div></div></div></div><div class="rhint" id="rhint">Scroll to travel ↓</div><svg viewBox="0 0 1200 700" preserveAspectRatio="none"><path id="pth" class="pa" d="M130,350 A200,200 0 0 1 330,150 H870 A200,200 0 0 1 1070,350 A200,200 0 0 1 870,550 H330 A200,200 0 0 1 130,350"/></svg></div>
+</div></section>
+
+<section class="s k t3 pl2" id="play"><div class="wd">
+
+ <h2 class="rv">Your turn, <em>press play</em></h2><p class="lead rv">This is the real onboarding, not a screenshot. Meet Alex the fox, and answer one gentle question on a 1–10 slider.</p>
+ <div class="vp rv" id="vp"><video id="pv" playsinline preload="none" controls poster="img/protos.jpg"><source src="img/protos.mp4" type="video/mp4"></video><div class="ov" id="ov"><div class="s1"></div><div class="s2"></div><div class="pb"></div><div class="tp">Tap to play</div><div class="sn">Sound on is best.</div></div></div>
+ <div class="tips rv"><span><b>▶</b>Tap to play</span><span><b>⟲</b>Start over any time</span><span><b>🔊</b>Sound on is best</span></div>
+ <div class="ctl rv"><button id="rs">Start over</button><button id="fs">Full screen</button></div>
+</div></section>
+
+
+<section class="s k t2 bz" id="biz"><div class="wd">
+ <div class="bzh rv"><small>Business validation</small><h2>Who we build for,<br><em>and why they say yes</em></h2><p>Two personas, one real interview and a growth plan. The evidence behind EmPals, in one place.</p></div>
+ <div class="bzt rv" role="tablist"><button class="on" data-p="0" role="tab">Parents of ADHD children</button><button data-p="1" role="tab">Special educators</button></div>
+</div><div class="zaf" id="bzp"></div></section>
+
+<section class="s k t3 ivs" id="ivs"><div class="wd">
+ <div class="bzh rv"><small>Interview scoring sheet</small><h2>One conversation, <em>scored honestly</em></h2><p>Special educator at a child developmental centre. Anything above 31 points signals strong interest. Hover or tap a criterion to read the interviewer’s note.</p></div>
+ <div class="zvx rv" id="bzi"></div>
+</div></section>
+<section class="s w t3 pim" id="problems"><div class="wd">
+ <h2 class="rv pmh">Problem identification</h2>
+ <h3 class="rv pmg">Faced by parents</h3><div class="pmp rv"><span>Child abandons tasks within minutes</span><span>Constant reminders turn into conflict</span><span>Guilt about screen time</span><span>No structured routine at home</span><span>Therapy gains fade between sessions</span><span>Too little time to guide learning daily</span><span>Unsure which apps are safe or effective</span><span>Hard to see real progress</span></div>
+ <h3 class="rv pmg">Faced by children</h3><div class="pmp rv"><span>Attention drifts before a task is done</span><span>Fear of getting things wrong</span><span>Instructions feel like orders</span><span>Busy, noisy apps overwhelm the senses</span><span>Little feedback that feels kind</span><span>Social cues are hard to practise</span><span>Learning feels like a chore, not play</span><span>Feeling different from classmates</span></div>
+ <h3 class="rv pmg">Faced by educators and therapists</h3><div class="pmp rv"><span>Paper-based notes and assessments</span><span>Hours lost on reporting</span><span>Progress is hard to share with parents</span><span>One-size-fits-all material</span><span>Limited time with each child</span><span>Interventions that start late</span><span>Low parental engagement</span><span>Few tools for early identification</span></div>
+ <h2 class="rv pmh" style="margin-top:110px">Opportunity mapping</h2>
+ <p class="pmq rv">“Between distraction and understanding lies a child who needs a calmer way to begin. That’s where EmPals begins.”</p>
+ <div class="pmk rv"><span><i class="k1"></i>Need area</span><span><i class="k2"></i>Insight / solution direction</span><span><i class="k3"></i>Possible interventions (design opportunities)</span></div>
+ <div class="opm rv"><div class="opv" style="left:2%"></div><div class="opv" style="left:26.5%"></div><div class="opv" style="left:51%"></div><div class="opv" style="left:75.5%"></div><div class="opr"><div class="opc"><i class="opn"></i><div class="opt"><b>Calm Starts</b><span>Make beginning a task feel safe and small</span></div></div><div class="opc"><i class="opn"></i><ul><li>Micro-learning modules</li><li>Alex the fox greeting</li><li>1–10 feeling check-in</li></ul></div><div class="opc"><i class="opn"></i><div class="opt"><b>Parental Guidance Support</b><span>Help parents reinforce, not repeat</span></div></div><div class="opc"><i class="opn"></i><ul><li>Daily skill progress report</li><li>Parent guidance tips</li><li>Weekly new games</li></ul></div></div><div class="opr"><div class="opc"><i class="opn"></i><div class="opt"><b>Sustained Attention</b><span>Keep focus with short, rewarding loops</span></div></div><div class="opc"><i class="opn"></i><ul><li>Timed focus sessions</li><li>Instant, kind feedback</li><li>Sensory-safe streak rewards</li></ul></div><div class="opc"><i class="opn"></i><div class="opt"><b>Visible Progress and Trust</b><span>Show parents and therapists the whole child</span></div></div><div class="opc"><i class="opn"></i><ul><li>Live dashboards</li><li>Automated reports</li><li>Child performance metrics</li></ul></div></div><div class="opr"><div class="opc"><i class="opn"></i><div class="opt"><b>Social Skill Practice</b><span>Turn wait, turn and respond into play</span></div></div><div class="opc"><i class="opn"></i><ul><li>Social-skill prompts</li><li>Role-play scenes</li><li>Emotion-expression cards</li></ul></div><div class="opc"><i class="opn"></i><div class="opt"><b>Joined-up Support</b><span>Connect home, school and therapy</span></div></div><div class="opc"><i class="opn"></i><ul><li>Shared parent, educator and therapist platform</li><li>AI assessments</li><li>Personalised activity plans</li></ul></div></div><div class="opr"><div class="opc"></div><div class="opc"></div><div class="opc"><i class="opn"></i><div class="opt"><b>Access for Every Family</b><span>Reach families beyond big cities</span></div></div><div class="opc"><i class="opn"></i><ul><li>Multilingual content</li><li>Monthly parent subscription</li><li>Clinician and school licences</li></ul></div></div></div>
+</div></section>
+
+<section class="s k t3 gx" id="grow"><div class="wd">
+ <div class="bzh rv"><small>Growth engine</small><h2>From first find<br>to <em>friend-to-friend</em></h2><p>How a family discovers EmPals, tries it, stays, pays and brings the next family. Tap a stage to see the plan.</p></div>
+ <div class="zfw rv" id="fw"></div>
+</div></section>
+
+<section class="s w t1 gmx" id="gap"><div class="wd">
+ <h2 class="rv">Gap matrix</h2><p class="l1 rv">Scored against the five things parents told us matter most, plus the insight that therapists need. Where do existing options leave a gap?</p>
+ <div class="gm rv" id="gm"></div>
+ <p class="gnote rv">Scores are our own estimates from the competitive-position board (1 to 10). Replace them with the formal audit results when they are ready.</p>
+</div></section>
+
+<section class="s w t1 ins"><div class="wd">
+ <h2 class="rv">Insights</h2><p class="l1 rv">We design for attention, effort and outcomes. But when it comes to feelings, safety and the first step, the system goes silent.</p>
+ <div class="cards"><div class="rv"><h3>Environment as a factor</h3><p>Children don’t refuse to learn. The place and pace around them make it hard to begin. Fix the environment, not the child.</p></div><div class="rv"><h3>Motivation as a factor</h3><p>“First work, then play.” Short, achievable tasks unlock fun, so starting becomes easier.</p></div><div class="rv"><h3>Safety as a factor</h3><p>No negative feedback. Mistakes are part of learning, and emotional safety comes before instruction.</p></div></div>
+ <p class="l2 rv">Each factor is covered in the system of learning… except how a child actually feels about it.</p>
+</div></section>
+
+<section class="s k t4 ax2"><div class="wd">
+ <h2 class="rv">Why are we <em>different?</em></h2>
+ <div class="axh rv"><span>Competitors</span><span>vs</span><span>EmPals</span></div>
+ <div class="axr rv"><div class="l">Fixed instructions</div><div class="m">AI tutor</div><div class="r">Personalised learning</div></div>
+ <div class="axr rv"><div class="l">Preset levels</div><div class="m">Smart sensing</div><div class="r">Real-time emotional understanding</div></div>
+ <div class="axr rv"><div class="l">Same gameplay</div><div class="m">Behaviour<br>responsive</div><div class="r">Adaptive learning pathways</div></div>
+ <div class="axr rv"><div class="l">Basic scores</div><div class="m">Analytics</div><div class="r">Holistic progress tracking</div></div>
+</div></section>
+
+
+<section class="s k t3"><div class="wd bi">
+ <div class="rv"><h2>Product identity</h2><div class="sb">Introduction to the brand</div>
+  <div class="br"><b>Promise</b><span>Play. Learn. Feel better. Grow.</span></div>
+  <div class="br"><b>Purpose</b><span>To help children with neurodevelopmental needs learn through play, while parents, therapists and educators see the whole child.</span></div>
+  <div class="br"><b>Value proposition</b><span>Support and assessment in one place: engaging learning experiences with continuous, emotion-aware evaluation.</span></div>
+  <div class="br"><b>Archetype</b><span><strong>Alex the fox, the friendly guide</strong> · patient, playful, never pushy.</span></div>
+  <div class="br"><b>Personality</b><span><strong>Calm · Friendly · Accessible · Encouraging · Never negative</strong></span></div></div>
+ <div class="cc2 rv"><div class="c4"><b>Trust</b><span>Parents and therapists see progress and emotion in one calm view</span></div><div class="c3"><b>Growth</b><span>Streaks, ownership and consistency build habit</span></div><div class="c2"><b>Play</b><span>Short tasks, instant feedback, meaningful rewards</span></div><div class="c1"><b>Safety</b><span>For every child</span></div></div>
+</div></section>
+
+<section class="s w t2"><div class="wd tv">
+ <div class="rv"><h2>Tone of voice</h2><p class="d">EmPals speaks like a patient, playful guide: warm, short and encouraging. Mistakes are never judged, and instructions never feel like orders.</p>
+  <div class="sl" id="sl"></div></div>
+</div></section>
+
+<section class="s w t4"><div class="wd nm">
+ <div class="a1 rv"><h2>Play.</h2><h2 class="on">Learn.</h2><h2>Feel better.</h2><h2>Grow.</h2><div class="w">Why this tagline?</div><ul><li>Says what the child does, in four steps</li><li>Reads like a promise to parents</li><li>Matches the learning loop in the product</li><li>Sets the tone: calm, honest, never boring</li></ul></div>
+ <div class="a2 rv"><em>FRIENDLY</em><div class="it">Different minds, brighter futures<small>For parents and educators</small></div><div class="it on">Little heart. Big feelings.<small>Warm, human and easy to remember</small></div><div class="it">Support + assessment<small>For therapists and partners</small></div></div>
+ <div class="a3 rv"><div class="q">“</div><p>Learning doesn’t break down for lack of ability. It breaks down when the environment doesn’t help a child begin. <i>Maybe it’s just about making it feel safe…<br>and then fun.</i></p><div class="qq">“First work, then play.”</div></div>
+</div></section>
+
+<section class="s k t1 cl"><div class="wd">
+ <h2 class="rv" id="colors" style="font-size:clamp(34px,4vw,56px)">Colors</h2><div class="sm rv">Overall palette strategy</div><div class="big rv">Calm + Friendly + Accessible.</div><p class="tx rv">Soft, warm tones with one lively accent. A 60-30-10 colour rule keeps screens calm for children who are easily overwhelmed.</p>
+ <div class="bl3 rv" id="sw"><div><div class="b" style="--c:#FF7A1A"></div><div class="n">Vibrant Orange<small>#FF7A1A · primary actions</small></div></div><div><div class="b" style="--c:#9AA8B9"></div><div class="n">Cool Mist Grey<small>#9AA8B9 · secondary and states</small></div></div><div><div class="b" style="--c:#6A89B5"></div><div class="n">Muted Steel Blue<small>#6A89B5 · backgrounds</small></div></div></div>
+</div></section>
+
+<section class="s w t3 ty"><div class="wd">
+ <div class="tf rv"><h2>Typeface</h2><p>The typography balances clarity and warmth. <b>Inter</b> keeps every screen neutral, legible and trustworthy across child and parent touchpoints.</p><p><b>Font guidelines</b><br>Body 14–16 px with 1.4–1.6× line height · line length 40–70 characters · sentence case, no ALL CAPS, no italics or decorative faces.</p></div>
+ <div class="tb2 rv"><div><h3>Primary typeface</h3><div class="bk"><div class="f1">INTER</div></div></div><div><h3>Type scale</h3><div class="bk"><ul><li>H1<span>28 · Bold · 32</span></li><li>H2<span>20 · Semi Bold · 28</span></li><li>Body<span>16 · Regular · 24</span></li><li>Small<span>14 · Regular · 20</span></li><li>Caption<span>12 · Regular · 16</span></li></ul></div></div></div>
+ 
+</div></section>
+
+<section class="s k t4 il"><div class="wd">
+ <h2 class="rv">Illustrations &amp; <mark>characters</mark></h2>
+ <div class="chips rv"><span>Friendly but not childish</span><span>Expressive and emotionally aware</span><span>Led by Alex the fox and his family of AI characters</span><span>Simple, calm and story-driven</span></div>
+ <div class="fm rv"><div class="fc fa" style="--bg:#6A89B5"><img src="img/n-alex.webp" alt="Alex"><em>Alex</em></div><div class="fc fb" style="--bg:#ffcc08"><img src="img/n-fuzzy.webp" alt="Fuzzy"><em>Fuzzy</em></div><div class="fc fc" style="--bg:#63387f"><img src="img/n-fizz.webp" alt="Fizz"><em>Fizz</em></div><div class="fc fd" style="--bg:#FF7A1A"><img src="img/n-nordy.webp" alt="Nordy"><em>Nordy</em></div><div class="fc fe" style="--bg:#7fae4e"><img src="img/n-jumpy.webp" alt="Jumpy"><em>Jumpy</em></div><div class="fc ff" style="--bg:#9AA8B9"><img src="img/n-bubbles.webp" alt="Bubbles"><em>Bubbles</em></div></div>
+ <div class="an rv"><div class="amw" style="--x:22%;--y:50%"><div class="am"><img src="img/board.webp" alt="Alex labelling game" data-z="Alex the fox, leading a labelling game"></div><i class="dt" style="left:22%;top:50%"></i><div class="ln"></div></div><div class="at"><h3>Character design &amp; form</h3><ul><li>Alex is a fox in round glasses: curious, kind and a little bookish. A guide, not a teacher.</li><li>Large expressive eyes and a wide smile keep the focus on emotion, so a child can read his mood at once.</li><li>Soft, rounded shapes and warm orange keep the screen friendly without feeling childish.</li></ul></div></div>
+ <div class="an rv"><div class="amw" style="--x:50%;--y:48%"><div class="am"><img src="img/protos.jpg" alt="Alex says hello" data-z="Alex the fox says hello" style="object-position:30% 50%"></div><i class="dt" style="left:50%;top:48%"></i><div class="ln"></div></div><div class="at"><h3>Scene &amp; story</h3><ul><li>A forest path leads in, so learning feels like a small journey rather than a test.</li><li>Speech bubbles carry one short instruction at a time, in plain words.</li><li>One clear “Continue” button per screen keeps the next step obvious.</li></ul></div></div>
+</div></section>
+
+<section class="s k t2 gs"><div class="wd">
+ <h2 class="rv">Getting started with the app,<br>setting the expectations</h2><p class="qt rv">“Sometimes the hardest part of learning isn’t the lesson… it’s starting.”</p>
+ <div class="st"><div class="rv"><h3>Meet Richie</h3><p>Curious, restless and easily overwhelmed.</p><p>He has spent three years hopping between child development centres.</p><p>But lately, <b>starting</b> has become the problem.</p></div>
+  <div class="cv2 rv"><img src="img/richie.webp" alt="Richie's daily life" data-z="Richie’s daily life"></div>
+  <div class="pb2 rv"><span>High distractibility</span><span>Intense emotional responses</span><span>Trouble focusing</span><span>Low confidence and frustration</span></div></div>
+ <div class="mt2 rv"><p>His parents sat down with him and tried something new. A friendly fox called Alex said hello, and asked one gentle question.</p><h3>EMPALS.</h3><div style="display:flex;justify-content:center"><div class="lph"><img src="img/protos.jpg" alt="Alex says hello" data-z="Alex the fox says hello"></div></div></div>
+</div></section>
+
+<section class="s k t1 uj" style="overflow:hidden"><div class="wd">
+ <h2 class="rv">User journey through screens</h2><p class="tx rv">Richie started using the app. The colours and animations made it feel like a storybook, not a test.</p>
+ <div class="ph2 rv"><div class="lph"><img src="img/protos.jpg" alt="Alex says hello" data-z="Alex the fox says hello"></div><div class="ar">→</div><div class="lph"><img src="img/board.webp" alt="Alex in a labelling game" data-z="Alex the fox, leading a labelling game"></div></div>
+ </div><div class="hand l"></div><div class="hand r"></div></section>
+
+<section class="s w t2 dd"><div class="wd">
+ <h2 class="rv">Design decisions</h2>
+ <div class="stg2 rv"><div class="col"><div class="dn l"><b>One primary action</b>One goal and one clear next step on every screen.</div><div class="dn l"><b>Large touch targets</b>Minimum 48 × 48 dp, easy for small hands.</div><div class="dn l"><b>Calm, warm colour</b>Soft warm tones with orange kept for the one thing to tap.</div></div>
+  <svg class="dl" id="dl" aria-hidden="true"></svg><div class="lph" id="dlp"><img src="img/protos.jpg" alt="Landscape prototype" data-z="The landscape prototype"></div>
+  <div class="col"><div class="dn r"><b>Orientation choice<br>Landscape layout</b>As prototyped, to feel like a storybook.</div><div class="dn r"><b>No negative feedback</b>Mistakes are part of learning.</div><div class="dn r"><b>Realistic backgrounds</b>A storybook forest, with Alex the animated fox greeting the child at the start.</div></div></div>
+</div></section>
+
+
+<section class="s w t4"><div class="wd fo">
+ <div class="sh1"></div><div class="sh2"></div>
+ <h2 class="rv">Future opportunities</h2>
+ <p class="rv">Finish the MVP (75% built) and test with more children and parents.<br>Deepen smart sensing so the game adapts to emotion in real time.<br>Grow the AI advisor with guidance written for parents and therapists.<br>Build partnerships with child development centres, schools and NGOs.<br>Keep privacy, safety and trust at the core as the product scales.</p>
+</div></section>
+<section class="s w t2"><div class="wd">
+ <h2 class="rv">The brochure</h2><p class="lead rv" style="color:#555">The story on paper: founders, the problem, the solution and the impact.</p>
+ <div class="stk bromk"><figure class="f rv bsh b1"><i class="tape"></i><img src="img/bro1.webp" alt="Brochure: founders and impact" data-z="Brochure: founders, impact and cover"></figure><figure class="f rv bsh b2"><i class="tape"></i><img src="img/bro2.webp" alt="Brochure: problem and solution" data-z="Brochure: what is EmPals, the problem and the solution"></figure></div>
+</div></section>
+
+<section class="s w t4 vl" id="validation"><div class="wd">
+ <div class="vh rv"><small>Validation</small><h2>Tried with real children, at the table.</h2><p>Alex was put in front of children and therapists at Gamaya Child Development Center, on a tablet, one-to-one. We watched where attention held, where it slipped and what the adult in the room did next.</p></div>
+ <div class="vg">
+  <figure class="vf v1 rv"><img src="img/val1.webp" alt="A child using EmPals on a tablet held by a therapist at a small red table" data-z="Child and therapist, one-to-one with Alex on a tablet"><figcaption><b>01</b>One-to-one<em>A short task on a tablet, at a child-sized table.</em></figcaption></figure>
+  <figure class="vf v2 rv"><img src="img/val2.webp" alt="A therapist showing EmPals on a tablet to a child while a second adult watches" data-z="A therapist guiding a child through the app while a second adult observes"><figcaption><b>02</b>With the therapist<em>The adult guides, the app does the pacing.</em></figcaption></figure>
+  <figure class="vf v3 rv"><img src="img/val3.webp" alt="Anukriti and a Gamaya team member beside the Gamaya Child Development Center sign" data-z="At Gamaya Child Development Center"><figcaption><b>03</b>At Gamaya<em>Where the research and the testing happened.</em></figcaption></figure>
+ </div>
+</div></section>
+
+<section class="s k t1 bcm" id="bcm"><div class="wd">
+ <h2 class="rv">#Be<em>ChangeMaker</em></h2><p class="lead rv" style="color:rgba(255,255,255,.75)">EmPals was presented at #BeChangeMaker during WorldSkills Shanghai 2026.</p>
+ <div class="gal"><figure class="g1 rv"><img src="img/bcm1.webp" alt="Receiving the certificate" data-z="Receiving the certificate on the #BeChangeMaker stage"></figure><figure class="g2 rv"><img src="img/bcm3.webp" alt="With the certificate" data-z="With the certificate, #BeChangeMaker backdrop"></figure><figure class="g3 rv"><img src="img/bcm4.webp" alt="Anukriti and Aditya" data-z="Anukriti and Aditya at WorldSkills Shanghai 2026"></figure><figure class="g4 rv"><img src="img/bcm5.webp" alt="Backstage" data-z="Backstage before the pitch"></figure><figure class="g5 rv"><img src="img/bcm2.webp" alt="Cohort on stage" data-z="The #BeChangeMaker cohort on stage"></figure><figure class="g6 rv"><img src="img/bcm6.webp" alt="WorldSkills board" data-z="The cohort in front of the WorldSkills Shanghai 2026 board" style="object-position:50% 60%"></figure></div>
+ <div class="vid rv"><video controls preload="none" playsinline poster="img/pitch.jpg"><source src="img/pitch.mp4" type="video/mp4"></video></div>
+ <div class="sts rv"><div><b class="num" data-to="75" data-suf="%"></b><span>MVP built</span></div><div><b class="num" data-to="18"></b><span>children tested</span></div><div><b class="num" data-to="28"></b><span>parents involved</span></div><div><b class="num" data-to="30" data-suf="+"></b><span>experts consulted</span></div><div><b class="num" data-to="3"></b><span>partner types onboarded</span></div></div>
+ <p class="src">From the EmPals pitch deck at the time of the pitch. They may have moved since.</p>
+</div></section>
+
+
+
+<footer class="ftb"><a href="https://claude.ai/artifact/7LeWRchZDZhtMt4156YnY1"><small>Back</small><b>All work ↑</b></a><a class="nx" href="https://claude.ai/artifact/B4MpEKMPRKndDiaT1g3LWj"><small>Next project</small><b>Presence →</b></a></footer>
+<div class="lbx" id="lb"><button class="x">✕</button><button class="pv">‹</button><img alt=""><p></p><button class="nx">›</button></div>
+
+<script>(function(){
+var $=function(s,r){return (r||document).querySelector(s)},A=function(s){return [].slice.call(document.querySelectorAll(s))};
+/* reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});A('.rv').forEach(function(e){io.observe(e)});
+var pl=document.querySelector('.pills');if(pl){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){pl.classList.add('go');o.disconnect()}},{threshold:.35}).observe(pl)}
+/* nav + progress */
+var bar=$('#bar');var nl=A('#cn a'),ns=nl.map(function(a){return $(a.getAttribute('href'))});
+/* process road */
+var NS='http://www.w3.org/2000/svg',svg=$('#rd svg'),pth=$('#pth'),L=pth.getTotalLength();pth.style.strokeDasharray=L;pth.style.strokeDashoffset=L;
+var P=[[130,350,.0,'Problem overview','Why learning breaks down for these children.','pill','l'],[400,150,.17,'Research framework','Observations, interviews, behaviour mapping.','c','u'],[600,150,.25,'Site study','Centres, classrooms and therapy rooms.','c','u'],[800,150,.33,'Designing motivation','Octalysis and the Premack principle.','c','u'],[1070,350,.5,'Design system','Calm colour, accessible type.','pill','r'],[800,550,.66,'Core flows','Entry, setup, learning loop, reward.','c','d'],[600,550,.75,'Prototype','Alex the fox and a 1–10 slider.','c','d'],[400,550,.84,'Pitch','On stage, WorldSkills Shanghai 2026.','c','d']];
+var rd=$('#rd'),els=[];
+P.forEach(function(n,ix){var g=document.createElementNS(NS,'g');
+ if(n[5]==='pill'){var r=document.createElementNS(NS,'rect');r.setAttribute('x',n[0]-44);r.setAttribute('y',n[1]-22);r.setAttribute('width',88);r.setAttribute('height',44);r.setAttribute('rx',22);r.setAttribute('class','nd');g.appendChild(r);var ln=document.createElementNS(NS,'line');ln.setAttribute('x1',n[0]);ln.setAttribute('x2',n[0]);ln.setAttribute('y1',n[1]+22);ln.setAttribute('y2',n[1]+110);ln.setAttribute('class','st');{g.appendChild(ln);var d=document.createElementNS(NS,'circle');d.setAttribute('cx',n[0]);d.setAttribute('cy',n[1]+110);d.setAttribute('r',6);d.setAttribute('class','nd');g.appendChild(d)}}
+ else{var c=document.createElementNS(NS,'circle');c.setAttribute('cx',n[0]);c.setAttribute('cy',n[1]);c.setAttribute('r',26);c.setAttribute('class','nd');g.appendChild(c);var dy=n[6]==='u'?96:-96;var ln2=document.createElementNS(NS,'line');ln2.setAttribute('x1',n[0]);ln2.setAttribute('x2',n[0]);ln2.setAttribute('y1',n[1]+(n[6]==='u'?-26:26));ln2.setAttribute('y2',n[1]+(n[6]==='u'?-70:70));ln2.setAttribute('class','st');g.appendChild(ln2);var d2=document.createElementNS(NS,'circle');d2.setAttribute('cx',n[0]);d2.setAttribute('cy',n[1]+(n[6]==='u'?-70:70));d2.setAttribute('r',6);d2.setAttribute('class','nd');g.appendChild(d2)}
+ svg.appendChild(g);
+ g.setAttribute('class','hit');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',n[3]);var hc=document.createElementNS(NS,'circle');hc.setAttribute('cx',n[0]);hc.setAttribute('cy',n[1]);hc.setAttribute('r',46);hc.setAttribute('fill','transparent');g.insertBefore(hc,g.firstChild);g.addEventListener('click',function(){sel(ix)});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(ix)}});
+ var lb=document.createElement('div');lb.className='lb2'+(n[6]==='l'?' lf':'');var lx=n[0]/12,ly=n[1]/7;
+ if(n[6]==='u'){lb.style.left=lx+'%';lb.style.top=(ly-18.5)+'%'}else if(n[6]==='d'){lb.style.left=lx+'%';lb.style.top=(ly+13.5)+'%'}else if(n[6]==='l'){lb.style.left='1%';lb.style.top=((n[1]+125)/7)+'%'}else{lb.className+=' rt2';lb.style.right='1%';lb.style.left='auto';lb.style.top=((n[1]+125)/7)+'%'}
+ lb.innerHTML=n[3]+'<span>'+n[4]+'</span>';lb.style.cursor='pointer';lb.addEventListener('click',function(){sel(ix)});rd.appendChild(lb);els.push([n[2],g,lb])});
+var DT=[['Learning breaks down <b>not for lack of ability</b>, but because the <b>environment does not support</b> <b>executive function</b>, <b>emotional safety</b> and <b>adaptive pacing</b>.','img/richie.webp','#take','See the core idea'],['Field observations, caregiver and expert interviews, behaviour mapping, environment analysis and a literature review, combining numbers with what we saw in the room.','img/richie.webp','#research','See the research'],['Classrooms and therapy rooms at Gamaya Child Developmental Center, to see how children actually learn and what gets in the way.','img/kid.webp','#research','See the research'],['Octalysis and the Premack principle: first work, then play. Short tasks, instant feedback and meaningful rewards.','img/board.webp','#motivation','See motivation design'],['Vibrant orange, cool mist grey and muted steel blue. Inter type, 48 dp touch targets and one primary action per screen.','img/fox.webp','#colors','See the design system'],['Entry, setup, the learning loop, and progress and reward, designed for clarity and trust.','img/protos.jpg','#play','See the flows'],['Alex the fox greets the child and asks one gentle question on a 1–10 slider, so the product can adapt from the first minute.','img/protos.jpg','#play','Play the prototype'],['Presented on stage at #BeChangeMaker during WorldSkills Shanghai 2026.','img/bcm1.webp','#bcm','See the recognition']];
+var cur=-1,mk=document.createElementNS(NS,'circle');mk.setAttribute('r',13);mk.setAttribute('fill','#FF7A1A');mk.setAttribute('stroke','#fff');mk.setAttribute('stroke-width',3);mk.style.opacity=0;mk.style.pointerEvents='none';svg.appendChild(mk);
+var mpos=0,raf=0,tok=0;function place(){var pt=pth.getPointAtLength(Math.min(Math.max(mpos,0),L-0.01));mk.setAttribute('cx',pt.x);mk.setAttribute('cy',pt.y);if(pinned())pth.style.strokeDashoffset=L-Math.max(0,mpos)}
+function travel(to,done){cancelAnimationFrame(raf);var from=mpos,dist=Math.abs(to-from),dur=dist<2?0:(pinned()?Math.min(950,Math.max(380,dist)):Math.min(1700,Math.max(650,dist*1.7))),t0=null;if(!dur){done();return}
+ function st(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),e=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;mpos=from+(to-from)*e;place();if(p<1)raf=requestAnimationFrame(st);else done()}raf=requestAnimationFrame(st)}
+var pn=document.getElementById('rdp');
+function sel(i){i=(i+P.length)%P.length;if(pinned())jump(i);else selI(i)}
+function selI(i){var my=++tok;cur=i;document.getElementById('rhint').style.opacity=0;pn.hidden=true;pn.classList.remove('pop');
+ els.forEach(function(e,k){var on=!pinned()||k<=i;[].forEach.call(e[1].children,function(c){c.classList.toggle('on',on)});e[2].classList.toggle('on',on);var f=e[1].querySelector('.nd');if(f)f.classList.remove('act');e[2].classList.toggle('cur',k===i)});
+ if(!pinned())pth.style.strokeDashoffset=0;if(mk.style.opacity!=='1'){mpos=0;place();mk.style.opacity=1}
+ travel(Math.max(P[i][2],0)*L,function(){if(my!==tok)return;
+  els.forEach(function(e,k){var f=e[1].querySelector('.nd');if(f)f.classList.toggle('act',k===i)});
+  pn.classList.toggle('ds',i===4);pn.classList.toggle('fl',i===5);var d=DT[i];pn.querySelector('.n').textContent=(i+1)+' / '+P.length;pn.querySelector('h3').textContent=P[i][3];pn.querySelector('p').innerHTML=d[0];pn.classList.toggle('noimg',i===0);var im=pn.querySelector('img');im.src=d[1];im.style.transform=d[1].indexOf('proto')>-1?'scale(1.24)':'none';var a=pn.querySelector('a');a.href=d[2];a.firstChild.textContent=d[3]+' ';pn.hidden=false;void pn.offsetWidth;pn.classList.add('pop')})}
+document.getElementById('rpv').onclick=function(){sel((cur<0?0:cur)-1)};document.getElementById('rnx').onclick=function(){sel(cur+1)};
+
+
+function pinned(){return innerWidth>860}
+var psec=document.getElementById('proc');
+function pgeo(){var r=psec.getBoundingClientRect(),cs=getComputedStyle(psec),pt=parseFloat(cs.paddingTop)||0,pb=parseFloat(cs.paddingBottom)||0;return [scrollY+r.top+pt,scrollY+r.top+r.height-pb-innerHeight]}
+function jump(i){var g=pgeo();scrollTo({top:g[0]+(i+.5)/P.length*(g[1]-g[0]),behavior:'smooth'})}
+function proc(){if(!pinned())return;var g=pgeo(),p=(scrollY-g[0])/(g[1]-g[0]),i=p<-.01?-1:Math.min(P.length-1,Math.max(0,Math.floor(p*P.length)));if(i===cur)return;
+ if(i<0){cur=-1;tok++;cancelAnimationFrame(raf);pn.hidden=true;pn.classList.remove('pop');els.forEach(function(e){[].forEach.call(e[1].children,function(c){c.classList.remove('on')});e[2].classList.remove('on','cur');var f=e[1].querySelector('.nd');if(f)f.classList.remove('act')});pth.style.strokeDashoffset=L;mk.style.opacity=0;mpos=0;document.getElementById('rhint').style.opacity=1;return}
+ selI(i)}
+function road(){if(pinned())return;var r=rd.getBoundingClientRect(),h=innerHeight,p=Math.max(0,Math.min(1,(h*.85-r.top)/(r.height*.9)));pth.style.strokeDashoffset=L*(1-p);els.forEach(function(e){var on=p>=e[0]-.005;[].forEach.call(e[1].children,function(c){c.classList.toggle('on',on)});e[2].classList.toggle('on',on)})}
+/* word list */
+var wl=A('#wl p');function words(){var m=innerHeight/2,best=null,bd=1e9;wl.forEach(function(p){var r=p.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-m);if(d<bd){bd=d;best=p}});wl.forEach(function(p){p.classList.toggle('on',p===best)});var bi=wl.indexOf(best);A('#wl .fl').forEach(function(f){f.classList.toggle('on',bi>=+f.dataset.t)})}
+/* tilt */
+var phn=$('#phn');function tilt(){var r=phn.getBoundingClientRect(),t=(r.top+r.height/2-innerHeight/2)/innerHeight;phn.style.transform='rotate('+(-19+t*6)+'deg) skewX(-2deg) translateY('+(t*30)+'px)'}
+function sc(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';var c=-1;ns.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*.45)c=i});nl.forEach(function(a,i){a.classList.toggle('on',i===c)});road();proc();words();if(innerWidth>860)tilt()}
+addEventListener('scroll',sc,{passive:true});addEventListener('resize',sc);sc();
+/* stepper */
+var sb=A('#stp button');sb.forEach(function(b){b.onclick=function(){sb.forEach(function(x){x.classList.toggle('on',x===b)});$('#sx').textContent=b.dataset.t}});
+A('#sw button').forEach(function(b){b.onclick=function(){var s=b.querySelector('small'),o=s.textContent;try{navigator.clipboard.writeText(b.dataset.h)}catch(e){}s.textContent='Copied';setTimeout(function(){s.textContent=o},1100)}});
+/* video */
+var v=$('#pv'),ov=$('#ov');ov.onclick=function(){ov.classList.add('off');v.play()};
+$('#rs').onclick=function(){ov.classList.add('off');v.currentTime=0;v.play()};
+$('#fs').onclick=function(){var f=v.requestFullscreen||v.webkitRequestFullscreen||v.webkitEnterFullscreen;if(f)f.call(v)};
+
+/* lightbox */
+var zs=A('img[data-z]'),lb=$('#lb'),li=$('img',lb),lp=$('p',lb),k=0;function sh(i){k=(i+zs.length)%zs.length;li.src=zs[k].currentSrc||zs[k].src;lp.textContent=zs[k].dataset.z;lb.classList.add('on')}
+zs.forEach(function(m,i){m.addEventListener('click',function(){sh(i)})});
+lb.onclick=function(e){var c=e.target.classList;if(e.target===lb||c.contains('x'))lb.classList.remove('on');else if(c.contains('pv'))sh(k-1);else if(c.contains('nx'))sh(k+1)};
+addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')sh(k-1);if(e.key==='ArrowRight')sh(k+1)});
+})();
+(function(){var el=document.getElementById('sl');if(!el)return;var R=[['Strict','Gentle',86],['Instructional','Playful',80],['Competitive','Collaborative',74],['Clinical','Friendly',88],['Formal','Warm',82]];
+el.innerHTML='<i></i>'+R.map(function(r){var x=r[2];return '<div class="row"><span class="a">'+r[0]+'</span><div class="ln"></div><span class="z">'+r[1]+'</span><span class="dt" style="left:'+(x-12)+'%;width:10px;height:10px"></span><span class="dt" style="left:'+(x-6)+'%;width:10px;height:10px"></span><span class="dt" style="left:'+x+'%;width:34px;height:34px"></span></div>'}).join('')})();
+
+/* stat count-up + dot grids */
+(function(){var fmt=function(v,d){return d?v.toFixed(1):String(Math.round(v))};
+function fill(it,replay){var dg=it.querySelector('.dg'),hi=+it.dataset.hi,lo=it.dataset.lo?+it.dataset.lo:0;var dots=dg.children;for(var i=0;i<dots.length;i++){dots[i].className='';dots[i].style.transitionDelay=''}
+ setTimeout(function(){for(var i=0;i<dots.length;i++){(function(i){var cls=i<lo?'l':(i<hi?'f':'');if(cls){dots[i].style.transitionDelay=(i*12)+'ms';dots[i].className=cls}})(i)}},30)}
+function count(el){var to=+el.dataset.to,lo=el.dataset.lo?+el.dataset.lo:null,suf=el.dataset.suf!==undefined?el.dataset.suf:(lo!==null?'%':''),t0=null;function st(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-p,3);el.textContent=(lo!==null?fmt(lo*e,1)+'–'+Math.round(to*e):fmt(to*e,0))+suf;if(p<1)requestAnimationFrame(st)}requestAnimationFrame(st)}
+document.querySelectorAll('.stt .dg').forEach(function(d){for(var i=0;i<100;i++)d.appendChild(document.createElement('i'))});
+var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io2.unobserve(e.target);var n=e.target.querySelector?e.target:null;if(e.target.classList.contains('num'))count(e.target);else{count(e.target.querySelector('.num'));fill(e.target)}})},{threshold:.4});
+document.querySelectorAll('.stt .sti').forEach(function(it){io2.observe(it);it.querySelector('em').textContent=it.dataset.cap;function go(){document.querySelectorAll('.stt .sti').forEach(function(x){x.classList.toggle('on',x===it)});fill(it);count(it.querySelector('.num'))}it.addEventListener('click',go);it.addEventListener('mouseenter',function(){fill(it)});it.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+document.querySelectorAll('.sts .num').forEach(function(n){io2.observe(n)});
+})();
+</script><script>(function(){
+var $=function(q,r){return (r||document).querySelector(q)},$$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
+function L(a){return '<ul>'+a.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'}
+var T10=[['Urban parents with ADHD-diagnosed children',10],['Parents noticing attention issues (undiagnosed)',15],['Special education schools',7],['Inclusive learning centres',5],['NGOs working in child development',3],['EdTech platforms (partnership)',2],['International ADHD support communities',0],['Government-supported education programmes',1],['Child psychologists / therapists',7],['Pediatric clinics',12]];
+var P=[{n:'Riya Sharma',i:'R',pos:'Working parent',co:'Urban middle-income household',inc:'₹6–15 LPA ($6–15 thousand)',bud:'₹800–₹1,200 / month ($8–12)',
+ ps:['Highly concerned about child’s future','Feels guilt around screen usage','Seeks structured solutions but lacks time','Emotionally stressed but proactive'],
+ bh:['Searches: “ADHD help for kids”, “focus apps”','Uses: YouTube, parenting forums, Instagram','Trusts: doctors, therapists, educators'],
+ di:['Child psychologists','School teachers','Peer parents','Online reviews'],
+ by:['Improves child’s focus and task completion','Easy for parents to use daily','Reduces dependency on screen addiction','Backed by behavioural science / experts','Affordable and accessible'],
+ uc:'Helping a child to complete daily learning tasks, improve social interaction and follow a structured home-learning routine.',
+ st:['Child starts task','Gets distracted within minutes','Parent intervenes repeatedly','Task remains incomplete'],
+ td:['Random YouTube learning','Verbal instructions from parents','No structured routine','Therapy sessions not integrated into daily life'],
+ wt:['Tasks broken into <b>micro-learning modules</b>','Built-in <b>social skill prompts</b> (wait, turn, respond, express emotion)','Timed focus sessions for homeschooling','Reward system for both <b>task + behaviour</b> completion','Parent guidance for reinforcement'],
+ qd:[['+40%','improvement in task completion during home learning'],['+30%','increase in sustained attention span'],['+25%','improvement in basic social interaction skills'],['−40%','reduction in parental supervision stress']],
+ tam:'$600 – 800 Thousand',tamn:'Total addressable market, India only'},
+{n:'Adhya Singh',i:'A',pos:'Educator',co:'Gamya Developmental Center',inc:'',bud:'',
+ ps:['Deeply committed to improving children’s developmental and educational outcomes','Emotionally invested in helping every child reach their full potential','Concerned about delayed interventions, limited resources and lack of parental engagement','Seeks evidence-based strategies, collaborative support systems and effective intervention tools'],
+ bh:['Searches online for child development milestones, ADHD, autism, speech delay, sensory issues','Uses Google, YouTube, Instagram and parenting forums for guidance','Reads reviews and testimonials before choosing a centre','Trusts paediatricians, therapists, educators and child psychologists'],
+ di:['School administrators and management teams who approve budgets and technology adoption','Parents and caregivers whose engagement influences implementation and continued use','Therapists, psychologists and multidisciplinary teams who recommend intervention tools','Government bodies, NGOs or funders that support educational programmes'],
+ by:['Qualified and experienced therapists and staff','Visible child progress and measurable outcomes','Safe, child-friendly and supportive environment','Personalised therapy plans and regular parent updates','Trustworthy reputation with positive reviews and recommendations'],
+ uc:'Supporting children in completing academic and classroom learning tasks independently, and improving social interaction, communication and peer engagement skills.',
+ st:['<b>Assess</b> the child’s learning needs, strengths and developmental challenges','<b>Plan</b> personalised learning activities and intervention strategies','<b>Implement</b> structured teaching sessions and skill-building exercises','<b>Track progress</b> and collaborate with parents and therapists to adjust support'],
+ td:['Manual observations and session notes recorded after each session','Progress tracked with paper-based assessments, worksheets and reports','Regular discussions with parents, teachers and therapists for updates','Intervention plans reviewed periodically against milestones'],
+ wt:['<b>AI-powered assessments</b> and progress tracking identify needs and monitor improvement','<b>Personalised activity recommendations</b> and plans from each child’s profile','<b>Centralised collaboration platform</b> for educators, parents and therapists, in real time','<b>Interactive dashboards</b> and automated reports for data-driven feedback'],
+ qd:[['−80%','progress tracking and reporting time, so educators can focus on direct child support']],tam:'',tamn:''}];
+var AF=[[['Psychographics',['Worried about their child’s future','Guilt about screen time','Wants structure, lacks time','Stressed but proactive']],
+['Behaviour',['Googles “ADHD help for kids”','YouTube, forums, Instagram','Trusts doctors and therapists']],
+['Influencers',['Child psychologists','School teachers','Peer parents','Online reviews']],
+['Buying criteria',['Improves focus and task completion','Easy to use daily','Less screen addiction','Backed by science and experts','Affordable']],
+['Done today',['Random YouTube learning','Verbal instructions only','No structured routine','Therapy not part of daily life']],
+['With EmPals',['Micro-learning modules','Social-skill prompts','Timed focus sessions','Rewards for task and behaviour','Parent guidance']],
+['Positioning',['EmPals: high engagement and effectiveness','Therapy: effective but low engagement','Worksheets: low engagement and impact','Games: engaging, little structure']],
+['Impact',['+40% task completion','+30% sustained attention','+25% social interaction','−40% parental stress']],
+['Top customers',['15 · Parents noticing attention issues','12 · Paediatric clinics','10 · Urban parents with ADHD kids','7 · Special education schools']]],
+[['Psychographics',['Committed to children’s outcomes','Invested in every child’s potential','Worried about delayed intervention','Wants evidence-based tools']],
+['Behaviour',['Searches milestones, ADHD, autism','Google, YouTube, Instagram','Reads reviews before choosing','Trusts paediatricians and therapists']],
+['Influencers',['School administrators approve budgets','Parents drive continued use','Therapists recommend tools','Funders and NGOs']],
+['Buying criteria',['Qualified, experienced staff','Visible, measurable progress','Safe, child-friendly space','Personalised plans and parent updates','Trusted reputation']],
+['Done today',['Manual session notes','Paper assessments','Updates by conversation','Periodic plan reviews']],
+['With EmPals',['AI assessments and tracking','Personalised activity plans','Shared parent and therapist platform','Live dashboards and reports']],
+['Positioning',['EmPals: high engagement and effectiveness','Therapy: effective but low engagement','Worksheets: low engagement and impact','Games: engaging, little structure']],
+['Impact',['−80% tracking and reporting time']],
+['Top customers',['15 · Parents noticing attention issues','12 · Paediatric clinics','10 · Urban parents with ADHD kids','7 · Child psychologists']]]];
+var AW=1700,AH=950,AX=850,AY=1110,AR=540;
+function persona(k){var p=P[k],D=AF[k],nC=D.length,B=[],N=[],O=[];
+ D.forEach(function(c,ci){var a=(-153+126*ci/(nC-1))*Math.PI/180,ux=Math.cos(a),uy=Math.sin(a),tx=-uy,ty=ux,nx=AX+AR*ux,ny=AY+AR*uy;N.push({x:nx,y:ny,n:c[0],ux:ux,uy:uy});O.push({x:nx+ux*48,y:ny+uy*34,r:Math.max(46,c[0].length*4.6+12),f:1});
+  c[1].forEach(function(t,j){var r=Math.max(60,Math.min(88,50+t.length*.8)),d=AR+96+r*.55+(j>>1)*r*1.6,off=(j%2?1:-1)*r*.78*((j>>1)?.55:1);B.push({t:t,c:ci,r:r,x:AX+d*ux+off*tx,y:AY+d*uy+off*ty})})});
+ B.forEach(function(b){b.ix=b.x;b.iy=b.y});var all=B.concat(O);
+ for(var it=0;it<700;it++){for(var i=0;i<all.length;i++)for(var j=i+1;j<all.length;j++){var a=all[i],b=all[j];if(a.f&&b.f)continue;var dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||.01,m=a.r+b.r+8;if(d<m){var u=dx/d,v=dy/d,pu=(m-d)*(a.f||b.f?.5:.25);if(!a.f){a.x-=u*pu;a.y-=v*pu}if(!b.f){b.x+=u*pu;b.y+=v*pu}}}
+  B.forEach(function(b){b.x+=(b.ix-b.x)*.008;b.y+=(b.iy-b.y)*.008;var dx=b.x-AX,dy=b.y-AY,d=Math.sqrt(dx*dx+dy*dy),mn=AR+b.r+24;if(d<mn){b.x=AX+dx/d*mn;b.y=AY+dy/d*mn}b.x=Math.max(b.r+10,Math.min(AW-b.r-10,b.x));b.y=Math.max(b.r+10,Math.min(AH-b.r-10,b.y))})}
+ var h='<div class="zafs" id="zafs" style="height:'+AH+'px"><svg viewBox="0 0 '+AW+' '+AH+'" width="'+AW+'" height="'+AH+'"><circle cx="'+AX+'" cy="'+AY+'" r="'+AR+'" class="zbg"/><circle cx="'+AX+'" cy="'+AY+'" r="'+(AR+130)+'" class="zbg2"/>';
+ B.forEach(function(b){var n=N[b.c];h+='<line class="zln" data-c="'+b.c+'" x1="'+n.x+'" y1="'+n.y+'" x2="'+b.x+'" y2="'+b.y+'"/>'});
+ N.forEach(function(n,ci){h+='<circle class="zdt" data-c="'+ci+'" cx="'+n.x+'" cy="'+n.y+'" r="9"/>'});h+='</svg>';
+ N.forEach(function(n,ci){var lx=n.x+n.ux*48,ly=n.y+n.uy*34;h+='<div class="zal" data-c="'+ci+'" style="left:'+lx+'px;top:'+ly+'px">'+n.n+'</div>'});
+ B.forEach(function(b,i){h+='<div class="zab" data-c="'+b.c+'" style="left:'+(b.x-b.r)+'px;top:'+(b.y-b.r)+'px;width:'+(b.r*2)+'px;height:'+(b.r*2)+'px;--d:'+(i*.035).toFixed(2)+'s"><span>'+b.t+'</span></div>'});
+ h+='<div class="zac" style="top:'+(AY-AR+92)+'px"><small>Persona</small><h3>'+p.n+'</h3><div class="zrl">'+p.pos+' · '+p.co+'</div>'+(p.inc?'<div class="zmeta"><span>Income <b>'+p.inc.replace(/ \(.*\)/,'')+'</b></span><span>Budget <b>'+p.bud.replace(/ \(.*\)/,'')+'</b></span></div>':'')+'<p><b>Use case.</b> '+p.uc+'</p>'+(p.tam?'<div class="ztm"><small>TAM</small>'+p.tam+'</div>':'<div class="ztm"><small>Next</small>Size the educator market</div>')+'</div></div>';
+ var el=$('#bzp');el.className='zaf';el.classList.remove('go');el.innerHTML=h;
+ var st=$('#zafs');function fit(){var s=Math.min(1,Math.max(.5,el.clientWidth/AW));st.style.transform='scale('+s+')';st.style.left=Math.max(0,(el.clientWidth-AW*s)/2)+'px';el.style.height=(AH*s)+'px';if(AW*s>el.clientWidth){el.style.overflowX='auto';el.scrollLeft=(AW*s-el.clientWidth)/2}else el.style.overflowX='hidden'}fit();window.__zafit=fit;
+ function hl(c){$$('.zab,.zal,.zln,.zdt',st).forEach(function(x){x.classList.toggle('dim',c!=null&&x.dataset.c!=c);x.classList.toggle('hi',c!=null&&x.dataset.c==c)})}
+ $$('.zab,.zal',st).forEach(function(x){x.onmouseenter=function(){hl(x.dataset.c)};x.onmouseleave=function(){hl(null)}});
+ requestAnimationFrame(function(){requestAnimationFrame(function(){if(window.__zaon)el.classList.add('go')})})}
+addEventListener('resize',function(){if(window.__zafit)window.__zafit()});
+new IntersectionObserver(function(es){es.forEach(function(e){window.__zaon=e.isIntersecting;if(e.isIntersecting)e.target.classList.add('go')})},{threshold:.15}).observe($('#bzp'));
+$$('.bzt button').forEach(function(b){b.onclick=function(){$$('.bzt button').forEach(function(x){x.classList.toggle('on',x===b)});var e=$('#bzp');e.classList.remove('zsw');void e.offsetWidth;persona(+b.dataset.p)}});
+persona(0);
+/* interview */
+var IV=[['Use case and problems importance','Did the use cases and problems resonate with the interviewee?',10,10,'She showed strong interest in the identified use cases and was able to clearly prioritise the problems based on their impact on children and caregivers. She also highlighted additional challenges they commonly face, reflecting active engagement and a deep understanding of the problem space.',[10,5,0]],
+['Willingness to solve the problems','Does the interviewee actively search for a solution or try to solve the problems?',10,10,'She actively looks for ways to address the challenges they face and showed a strong willingness to adopt effective solutions. They explained how they currently try to solve these problems and shared the efforts already made to improve support for children and caregivers.',[10,5,0]],
+['Resonance of proposed solution','Was the interviewee engaged during the interview or excited about the solution?',8,8,'The psychologist showed strong interest and actively contributed throughout the discussion. They highlighted key challenges in assessment and intervention, shared practical clinical insights, and stressed the need for tools that support early identification, continuous monitoring and better engagement. They were optimistic about better collaboration between therapists, caregivers and educators.',[8,4,0]],
+['Agreement to follow up','Did the interviewee agree to a follow-up interview or to be a prototype user?',8,8,'The psychologist wants to stay involved through development and validation. They were open to future discussions, reviewing prototypes and giving expert feedback, and willing to contribute as an early user and advisor.',[8,4,0]],
+['Willingness to pay','Did the interviewee offer to pay for the solution?',1,3,'The developmental centre acknowledged the value and could envision budgeting for such a service, but was not ready to commit to a purchase immediately. They would need further evaluation of outcomes, implementation and pricing.',[3,1,0]],
+['Willingness to refer others','Did the interviewee offer to refer others to us?',2,4,'The centre found the solution relevant and was interested in sharing it with other professionals and centres if proven effective. They did not proactively offer referrals but were willing to recommend contacts when asked.',[4,2,0]]];
+var IW=1700,IH=920,HX=330,HY=470,IR=930,TH=[-24,-14.4,-4.8,4.8,14.4,24];
+var ih='<div class="zis" id="zis"><svg viewBox="0 0 '+IW+' '+IH+'" width="'+IW+'" height="'+IH+'"><circle cx="'+HX+'" cy="'+HY+'" r="'+IR+'" class="zia1"/><circle cx="'+HX+'" cy="'+HY+'" r="470" class="zia2"/><circle cx="'+HX+'" cy="'+HY+'" r="120" class="zia3"/>';
+IV.forEach(function(r,i){var a=TH[i]*Math.PI/180,x=HX+IR*Math.cos(a),y=HY+IR*Math.sin(a);ih+='<line class="zil" data-i="'+i+'" x1="'+HX+'" y1="'+HY+'" x2="'+x+'" y2="'+y+'"/><circle class="zid" data-i="'+i+'" cx="'+x+'" cy="'+y+'" r="9"/>'});
+ih+='</svg>';
+IV.forEach(function(r,i){var a=TH[i]*Math.PI/180,x=HX+IR*Math.cos(a),y=HY+IR*Math.sin(a),mx=HX+(IR*.56)*Math.cos(a),my=HY+(IR*.56)*Math.sin(a),sn=r[4].split('. ')[0];if(sn.length>118)sn=sn.slice(0,115).replace(/\s+\S*$/,'')+'…';
+ ih+='<div class="zit" data-i="'+i+'" style="left:'+mx+'px;top:'+my+'px;transform:translate(-50%,-50%) rotate('+TH[i]+'deg)"><span>'+sn+'</span></div>';
+ ih+='<button class="zin" data-i="'+i+'" style="left:'+(x+22)+'px;top:'+y+'px"><b>'+r[0]+'</b><em>'+r[2]+' / '+r[3]+' · '+r[1]+'</em></button>';
+ ih+='<div class="zip" data-i="'+i+'" style="left:'+(HX+(IR*.55)*Math.cos(a))+'px;top:'+(HY+(IR*.55)*Math.sin(a))+'px;transform:translate(-50%,-50%) rotate('+TH[i]+'deg)"><p>'+r[4]+'</p><div class="zrb"><em>Yes &middot; '+r[5][0]+' pts</em><em>Somewhat &middot; '+r[5][1]+' pts</em><em>No &middot; 0 pts</em></div></div>'});
+ih+='<div class="zih" style="left:'+(HX-80)+'px;top:'+(HY-80)+'px"><div class="zring" id="ring"><div><div><b id="tn">0</b><span>of 43</span></div></div></div></div><div class="zhl" style="left:'+(HX-310)+'px;top:'+(HY-150)+'px"><b>Interview score</b><span>Interviewee: Riya S.<br>Segment: Special educator<br>Engine: Child developmental centre</span></div><div class="zhv" style="left:'+(HX-100)+'px;top:'+(HY+104)+'px"><span class="zvd">Strong interest</span><p>Above 31 points indicates strong interest.</p></div></div>';
+var vx=$('#bzi');vx.className='zia';vx.innerHTML=ih;
+var zs=$('#zis');function ifit(){var sc=Math.min(1,Math.max(.5,vx.clientWidth/IW));zs.style.transform='scale('+sc+')';zs.style.left=Math.max(0,(vx.clientWidth-IW*sc)/2)+'px';vx.style.height=(IH*sc)+'px';if(IW*sc>vx.clientWidth){vx.style.overflowX='auto'}else vx.style.overflowX='hidden'}ifit();addEventListener('resize',ifit);
+var vcur=-1,vauto=true;
+function vshow(i){vcur=i;$$('[data-i]',zs).forEach(function(x){x.classList.toggle('on',+x.dataset.i===i)})}
+$$('.zin,.zid',zs).forEach(function(x){x.onclick=function(){vauto=false;vshow(+x.dataset.i)};x.onmouseenter=function(){vauto=false;vshow(+x.dataset.i)}});
+vshow(0);setInterval(function(){var r=vx.getBoundingClientRect();if(vauto&&r.top<innerHeight&&r.bottom>0)vshow((vcur+1)%6)},4200);
+var ioT=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;ioT.disconnect();vx.classList.add('go');var t0=null,n=$('#tn'),rg=$('#ring');(function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1400),v=Math.round(39*(1-Math.pow(1-p,3)));n.textContent=v;rg.style.setProperty('--p',v/43*100);if(p<1)requestAnimationFrame(f)})(performance.now())})},{threshold:.3});ioT.observe(vx);
+/* flywheel */
+var FW=[{k:'Find',s:'Acquisition',q:'Which channels should bring these users to us?',n:['Social media communities','App Store and Play Store listing','Schools and NGOs','Psychiatrists and paediatricians'],m:['Leads','20+'],a:-90},
+{k:'Try',s:'Activation',q:'What should enable users to try the product and reach first value?',n:['Free game trial','Referral coupon','First game session'],m:['Opportunities','2'],a:-30},
+{k:'Use',s:'Retention',q:'What should make users continue using the product?',n:['AI difficulty adaptation','Sensory-safe streak rewards','Daily skill progress report','Weekly new games','Child performance metrics'],m:['Customers','To be measured'],a:30},
+{k:'Pay',s:'Revenue',q:'What should generate revenue from users?',n:['Monthly subscription for parents','Paediatricians, psychologists and therapists','Clinician and school licences'],m:['Revenue / MRR','To be measured'],a:90},
+{k:'Refer',s:'Referrals',q:'What should encourage users to bring others?',n:['Parent community and support circles','Invite-a-family credits','Parent and child success stories','Money incentives by referral coupons'],m:['Promoters','To be measured'],a:150},
+{k:'Scale',s:'Systems',q:'What systems should enable the engine to scale?',n:['Multilingual','Other neurodivergent-related games','More game content'],m:['Active contacts','To be measured'],a:-150},
+{k:'Need',s:'Targeting',q:'Which customer segments and use cases have the strongest need for our solution?',n:['Therapists and special educators','Inclusive schools','Parents of neurodivergent kids'],m:['Reachable market','Attract, engage, delight']}];
+var TG={Need:'Who needs us most',Find:'Channels that bring families in',Try:'A first win, free of risk',Use:'Reasons to keep coming back',Pay:'Revenue that sustains it',Refer:'Families bring families',Scale:'Systems that let it grow'};
+var ORD=[6,0,1,2,3,4,5],DM=[118,204,292,382,470,556,640],W='<div class="zng" id="zng">';
+ORD.forEach(function(ix,r){var f=FW[ix];W+='<div class="znc" data-i="'+ix+'" style="width:'+(DM[r]/640*100).toFixed(3)+'%"><button class="znl" data-i="'+ix+'"><b>'+f.k+'</b><span>'+TG[f.k]+'</span></button></div>'});
+W+='</div><div class="zwd2" id="wd2"></div>';$('#fw').innerHTML=W;
+var cur=0,auto=true,seen={},seenT=null,SN=[6,0,1,2,3,4,5],GATED=true;
+function lockUI(){return true}
+function lockUI_old(){var n=Object.keys(seen).length,ok=n>=7,el=$('#zlk');el.className='zlk'+(ok?' ok':'');el.innerHTML='<div class="zlt"><b>'+(ok?'Unlocked':'Read every stage to continue')+'</b><span>'+(ok?'You have read the whole growth engine.':n+' of 7 read · hover or tap each ring')+'</span></div><div class="zlc">'+SN.map(function(i){return '<i class="'+(seen[i]?'on':'')+'" data-i="'+i+'">'+(seen[i]?'✓ ':'')+FW[i].k+'</i>'}).join('')+'</div><button class="zlb" '+(ok?'':'disabled')+'>'+(ok?'Continue to the gap matrix ↓':'🔒 Gap matrix locked')+'</button>';var bt=el.querySelector('.zlb');bt.onclick=function(){if(!ok)return;var g=document.getElementById('gap');scrollTo({top:g.getBoundingClientRect().top+scrollY-10,behavior:'smooth'})};$$('.zlc i',el).forEach(function(c){c.onclick=function(){auto=false;show(+c.dataset.i,1)}});return ok}
+function gate(on){var g=document.getElementById('grow');for(var e=g.nextElementSibling;e;e=e.nextElementSibling){if(e.tagName==='SECTION'||e.tagName==='FOOTER')e.classList.toggle('zhide',on)}}
+function mark(i){return;if(seen[i])return;seen[i]=1;var ok=lockUI();if(ok&&GATED){GATED=false;gate(false);var z=$('#zlk');z.classList.add('pop')}}
+function show(i,u){cur=i;clearTimeout(seenT);seenT=setTimeout(function(){mark(i)},u?700:2600);$$('.znc').forEach(function(b){b.classList.toggle('on',+b.dataset.i===i)});var f=FW[i],r=[-3,2,-2,3,-1,2,-3];$('#wd2').outerHTML='<div class="zwd2" id="wd2"><div class="k">'+f.s+'</div><h3>'+f.k+'</h3><p class="zqs">'+f.q+'</p><div class="zstk">'+f.n.map(function(n,j){return '<i style="--r:'+r[j%7]+'deg;--i:'+j+'">'+n+'</i>'}).join('')+'</div>'+(f.m[1]==='To be measured'?'':'<div class="zmx">'+f.m[0]+'<b>'+f.m[1]+'</b></div>')+'</div>'}
+$$('.znl').forEach(function(b){b.onclick=function(){var k=ORD.indexOf(+b.dataset.i),g=pgeo();scrollTo({top:g.s+(k+.5)/7*g.len,behavior:'smooth'})}});show(6);
+var gsec=document.getElementById('grow');
+function pgeo(){var r=gsec.getBoundingClientRect(),top=r.top+scrollY,len=gsec.offsetHeight-innerHeight;return{s:top,len:Math.max(1,len)}}
+function fit(){var h=innerHeight;gsec.style.height=(h+h*0.5*7)+'px';var w=gsec.querySelector('.wd');w.style.zoom='';var c=w.scrollHeight;w.style.zoom=c>h-30?((h-30)/c).toFixed(3):''}
+var last=-1;function gtick(){var g=pgeo(),p=(scrollY-g.s)/g.len;if(p<-.05||p>1.05)return;var k=Math.max(0,Math.min(6,Math.floor(Math.max(0,p)*7)));if(k!==last){last=k;show(ORD[k])}}
+fit();addEventListener('resize',function(){fit();gtick()});addEventListener('scroll',gtick,{passive:true});setTimeout(fit,600);setTimeout(fit,2000);
+/* channels */
+var PC={p:['Primary','#5fdc8d'],s:['Secondary','#cfee9a'],m:['Medium','#ffee8a'],l:['Later','#ff8f8f']};
+var F=[['Direct Sales','p','Personally reaching out to families, schools and therapy centres to introduce EmPals.',1],['Social Media','p','Short videos showing how the app helps neurodivergent kids, shared in parent communities.',1],['Events & Trade Shows','s','Attending autism and special education events to connect with institutions and families.'],['Social & Display Ads','s','Targeted ads reaching parents of neurodivergent children on social platforms.'],['Platforms & Marketplaces','s','Listed under special needs and learning categories on app stores and school portals.'],['SEM','l','Paid search ads shown to parents looking for learning support for their child.'],['SEO','p','Blog posts and guides helping parents find EmPals while searching for learning support.',1],['Offline Ads','m','Simple leaflets placed in therapy and paediatric waiting rooms for parents to pick up.'],['Account Based Marketing','m','Personal outreach to leading special and inclusive schools with a free trial offer.'],['Email Marketing','p','Weekly tips and updates for parents, tailored to their child’s specific condition.',1]];
+var S=[['WOM Virality','p','Parents sharing their child’s progress in neurodivergent parenting groups online.',1],['Incentivised Virality','s','Parents get one free month when they invite another family to join EmPals.'],['Influencer Marketing','p','Parents and therapists sharing honest reviews with their online communities.',1],['Business Development','s','Formal partnerships with hospitals and national organisations supporting neurodivergent children.'],['Speaking Engagements','s','Founders speaking at autism and dyslexia awareness events and parent-teacher meetings.'],['Network Virality','p','Schools and clinics recommending EmPals directly to the families they work with.'],['Demonstration Virality','p','Schools showing EmPals to parents at meetings, leading to immediate sign-ups.'],['Publicity','p','Stories in parenting magazines and the education press about helping neurodivergent children.',1],['Community Building','p','A safe online space for families to connect, share stories and support each other.',1],['Outbreak Virality','l','When a child’s breakthrough is shared widely, easy sharing is built into the app.']];
+function tiles(a,o){return a.map(function(t,i){return '<div class="zct" data-p="'+t[1]+'" data-s="'+(t[3]||0)+'" style="--c:'+PC[t[1]][1]+';--i:'+(i+o)+'"><small>'+PC[t[1]][0]+' priority</small><b>'+t[0]+'</b><p>'+t[2]+'</p></div>'}).join('')}
+var all=F.concat(S),cnt={p:0,s:0,m:0,l:0};all.forEach(function(t){cnt[t[1]]++});
+var C='<div class="zch0"><div class="ztm">Traction milestone<b>10,000 customers</b></div><div class="zfl"><button class="on" data-f="all"><i style="--c:#fff"></i>All 20</button>'+Object.keys(PC).map(function(k){return '<button data-f="'+k+'"><i style="--c:'+PC[k][1]+'"></i>'+PC[k][0]+' · '+cnt[k]+'</button>'}).join('')+'</div><button class="zbt">★ Show first bets</button></div>';
+C+='<div class="zcg"><div><h3>Findability<span>CHANNELS</span></h3><p class="zsb">How families find EmPals</p><div class="zcgs">'+tiles(F,0)+'</div></div><div><h3>Shareability<span>VIRALITY</span></h3><p class="zsb">How families bring other families</p><div class="zcgs">'+tiles(S,10)+'</div></div></div>';
+C+='<div class="zcw"><div class="zwk"><small>What is working</small><p>Parents will find EmPals online, see their child grow, and share it with other parents.</p></div><div class="zce"><small>Connected engine</small><ol><li>Parent finds us via social</li><li>Child shows success</li><li>Parent tells other parents</li><li>New families join</li></ol></div></div>';
+var chcEl=$('#chc');if(!chcEl)return;chcEl.innerHTML=C;
+var flt='all',stars=false;function ap(){$$('.zct').forEach(function(t){var d=(flt!=='all'&&t.dataset.p!==flt)||(stars&&t.dataset.s!=='1');t.classList.toggle('dim',d);t.classList.toggle('star',stars&&t.dataset.s==='1')})}
+$$('.zfl button').forEach(function(b){b.onclick=function(){flt=b.dataset.f;$$('.zfl button').forEach(function(x){x.classList.toggle('on',x===b)});ap()}});
+$('.zch0 .zbt').onclick=function(){stars=!stars;this.classList.toggle('on',stars);ap()};
+})();
+</script><script>(function(){
+var $=function(q,r){return (r||document).querySelector(q)};
+var SER=[['Therapy / traditional','#8c8c8c',22],['Worksheets','#cfcfcf',17],['Games / entertainment','#5a5a5a',20],['EmPals','#000',34]];
+var ROWS=[['Focus and task completion',[7,3,3,8]],['Easy for parents, daily',[4,7,8,8]],['Reduces screen dependence',[8,8,2,8]],['Backed by behavioural science',[9,3,2,8]],['Affordable and accessible',[2,9,7,7]],['Parent and therapist insight',[6,2,2,9]]];
+var h='<div class="gmh"><div class="gmn">'+[1,2,3,4,5,6,7,8,9,10].map(function(n){return '<span style="left:'+((n-1)/9*100)+'%">'+n+'</span>'}).join('')+'</div><b>Gap vs best</b></div>';
+ROWS.forEach(function(r,ri){var best=Math.max(r[1][0],r[1][1],r[1][2]),gap=r[1][3]-best,groups={};
+ h+='<div class="gmr" data-r="'+ri+'"><div class="gml"><span>'+r[0]+'</span><div class="gmw" data-r="'+ri+'" title="How much does this matter?"><b data-w="1" class="on">★</b><b data-w="2" class="on">★</b><b data-w="3">★</b></div></div><div class="gmp">';
+ r[1].forEach(function(v,si){var g=groups[v]=(groups[v]||[]);g.push(si)});
+ r[1].forEach(function(v,si){var g=groups[v],ix=g.indexOf(si),dy=(ix-(g.length-1)/2)*15,S=SER[si];h+='<i class="gmd'+(si==3?' em':'')+'" data-s="'+si+'" data-v="'+v+'" data-n="'+S[0]+' · '+v+'" style="--tc:'+(si==1?'#000':'#fff')+';left:'+((v-1)/9*100)+'%;top:calc(50% + '+dy+'px);width:'+S[2]+'px;height:'+S[2]+'px;background:'+S[1]+';--d:'+(ri*.12+si*.05).toFixed(2)+'s"></i>'});
+ h+='</div><div class="gmg'+(gap>0?' up':gap<0?' dn':'')+'">'+(gap>0?'+':'')+gap+'</div></div>'});
+h+='<div class="gms" id="gms"><div class="gmsh"><b>Weighted score</b><span>Tap the stars beside each criterion to say how much it matters to you. The totals update live.</span></div><div class="gmsb" id="gmsb"></div></div>';
+h+='<div class="gmf"><div class="gmlg"><b>Legend</b>'+SER.map(function(S,si){return '<div class="gmq" data-s="'+si+'" tabindex="0" role="button"><i style="width:'+S[2]*.7+'px;height:'+S[2]*.7+'px;background:'+S[1]+'"></i>'+S[0]+'</div>'}).join('')+'</div><div class="gmsr"><b>Score range</b><div><span>1–3</span>Minimal presence or unclear execution</div><div><span>4–6</span>Moderate effort, partially developed</div><div><span>7–8</span>Strong, well developed</div><div><span>9–10</span>Highly refined, best in class</div></div></div>';
+var el=$('#gm');el.innerHTML=h;
+var WT=ROWS.map(function(){return 2});
+function calc(){var sw=WT.reduce(function(a,b){return a+b},0),t=SER.map(function(S,si){var x=0;ROWS.forEach(function(r,ri){x+=r[1][si]*WT[ri]});return x/sw}),mx=Math.max.apply(null,t);$('#gmsb').innerHTML=SER.map(function(S,si){return '<div class="gmb'+(si==3?' em':'')+(t[si]===mx?' top':'')+'"><span>'+S[0]+'</span><div class="gmt"><i style="width:'+(t[si]*10)+'%"></i></div><b>'+t[si].toFixed(1)+'</b></div>'}).join('')}
+calc();
+[].slice.call(el.querySelectorAll('.gmw')).forEach(function(w){var ri=+w.dataset.r;[].slice.call(w.children).forEach(function(b){b.onclick=function(){WT[ri]=+b.dataset.w;[].slice.call(w.children).forEach(function(c){c.classList.toggle('on',+c.dataset.w<=WT[ri])});calc()}})});
+var iso=-1;function isolate(i){iso=(iso===i)?-1:i;el.dataset.s=iso<0?'':iso;[].slice.call(el.querySelectorAll('.gmd')).forEach(function(d){d.classList.toggle('dim',iso>=0&&+d.dataset.s!==iso)});[].slice.call(el.querySelectorAll('.gmq')).forEach(function(q){q.classList.toggle('on',+q.dataset.s===iso)})}
+[].slice.call(el.querySelectorAll('.gmq')).forEach(function(q){q.onclick=function(){isolate(+q.dataset.s)};q.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();isolate(+q.dataset.s)}}});
+new IntersectionObserver(function(es,o){if(es[0].isIntersecting){el.classList.add('go');o.disconnect()}},{threshold:.25}).observe(el);
+})();</script>
+<script>(function(){
+var m=document.querySelector('.opm');if(!m)return;var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
+var units=[];
+$$('.opr',m).forEach(function(r){var c=$$('.opc',r);[[0,1],[2,3]].forEach(function(pr){var a=c[pr[0]],b=c[pr[1]];if(!a.querySelector('.opt'))return;var u=units.length;units.push([a,b]);a.dataset.u=b.dataset.u=u;a.tabIndex=b.tabIndex=0;var k=document.createElement('i');k.className='opk';a.appendChild(k);$$('li',b).forEach(function(l,i){l.style.setProperty('--k',i)})})});
+var cur=-1,lock=-1,auto=true;
+function show(u){cur=u;m.classList.toggle('hv',u>=0);units.forEach(function(p,i){p[0].classList.toggle('on',i===u);p[1].classList.toggle('on',i===u)})}
+units.forEach(function(p,i){p.forEach(function(c){c.addEventListener('mouseenter',function(){auto=false;if(lock<0)show(i)});c.addEventListener('focus',function(){auto=false;if(lock<0)show(i)});c.addEventListener('click',function(){auto=false;if(lock===i){lock=-1}else{lock=i;show(i)}});});});
+m.addEventListener('mouseleave',function(){if(lock<0&&!auto)show(-1)});
+/* legend filters */
+var lg=$$('.pmk span'),map=['n','i','p'];
+lg.forEach(function(sp,i){sp.setAttribute('role','button');sp.tabIndex=0;var f=function(){var on=!sp.classList.contains('on');lg.forEach(function(x){x.classList.remove('on')});if(on)sp.classList.add('on');if(on)m.setAttribute('data-f',map[i]);else m.removeAttribute('data-f')};sp.onclick=f;sp.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}}});
+/* auto tour when visible */
+var vis=false;new IntersectionObserver(function(es){vis=es[0].isIntersecting},{threshold:.35}).observe(m);
+var n=-1;setInterval(function(){if(auto&&vis&&lock<0){n=(n+1)%units.length;show(n)}},2600);
+})();
+(function(){var w=document.querySelector('.dd .stg2'),sv=document.getElementById('dl'),ph=document.getElementById('dlp');if(!w||!sv||!ph)return;
+function draw(){if(innerWidth<=900){sv.innerHTML='';return}var R=w.getBoundingClientRect(),P=ph.getBoundingClientRect(),h='';
+var ls=[].slice.call(w.querySelectorAll('.dn'));
+['l','r'].forEach(function(side){var g=ls.filter(function(e){return e.classList.contains(side)});
+g.forEach(function(e,i){var b=e.getBoundingClientRect(),inner=e.querySelector('b').getBoundingClientRect();
+var y0=b.top+b.height/2-R.top;
+var sx=(side==='l'?b.right+12:b.left-12)-R.left;
+var px=(side==='l'?P.left:P.right)-R.left;
+var py=P.top-R.top+P.height*(0.26+0.24*i);
+var mx=side==='l'?sx+(px-sx)*.45:sx+(px-sx)*.45;
+var d='M'+sx+' '+y0+' L'+mx+' '+y0+' L'+(px+(side==='l'?-10:10))+' '+py+' L'+px+' '+py;
+h+='<path d="'+d+'" style="--L:'+Math.ceil(Math.hypot(px-sx,py-y0)+Math.abs(px-sx)+60)+'"/><circle cx="'+px+'" cy="'+py+'" r="5"/>'});});
+var on=sv.classList.contains('on');sv.innerHTML=h;if(on)sv.classList.add('on')}
+draw();addEventListener('resize',draw);addEventListener('load',draw);
+var im=ph.querySelector('img');if(im&&!im.complete)im.addEventListener('load',draw);
+if('IntersectionObserver' in window){new IntersectionObserver(function(en,o){if(en[0].isIntersecting){draw();sv.classList.add('on');o.disconnect()}},{threshold:.5}).observe(w)}else sv.classList.add('on')})();
+</script>
+<!--cstabs--><nav class="cstabs" aria-label="Portfolio"><a href="https://claude.ai/artifact/7LeWRchZDZhtMt4156YnY1" target="_top">Home</a><a href="https://claude.ai/artifact/PAooVRJa82KvCVwQChhKpV" target="_top" class=on aria-current=page>EmPals</a><a href="https://claude.ai/artifact/B4MpEKMPRKndDiaT1g3LWj" target="_top">Presence</a><a href="https://claude.ai/artifact/3VLtXQ8bNRHgdMe99hdVwB" target="_top">Tirth Dham</a><a href="https://claude.ai/artifact/3yLrA9R1M47wxquvb8ZSSq" target="_top">Papers</a></nav><!--/cstabs--></body></html>
